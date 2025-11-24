@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import * as leadController from '../controllers/leadController';
-import { authenticateToken } from '../middlewares/authMiddleware';
-import { validate } from '../utils/validate';
+import * as leadController from '../controllers/leadController.js';
+import { authenticateToken } from '../middlewares/authMiddleware.js';
+import { validate } from '../utils/validate.js';
 import { z } from 'zod';
 
 const router = Router();

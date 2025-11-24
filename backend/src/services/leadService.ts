@@ -1,4 +1,4 @@
-import prisma from '../config/db';
+import prisma from '../config/db.js';
 import { LeadStatus, LeadSource, LeadType, LeadPriority } from '@prisma/client';
 
 export interface CreateLeadData {

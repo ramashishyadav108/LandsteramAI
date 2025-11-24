@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import * as leadService from '../services/leadService';
-import { sendSuccess, sendCreated } from '../utils/response';
-import { NotFoundError } from '../middlewares/errorHandler';
+import * as leadService from '../services/leadService.js';
+import { sendSuccess, sendCreated } from '../utils/response.js';
+import { NotFoundError } from '../middlewares/errorHandler.js';
 import { LeadStatus, LeadSource } from '@prisma/client';
 
 export const createLead = async (req: Request, res: Response, next: NextFunction) => {
