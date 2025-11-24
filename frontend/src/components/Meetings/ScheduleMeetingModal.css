@@ -1,0 +1,278 @@
+.schedule-meeting-modal {
+  max-width: 850px;
+  width: 95%;
+}
+
+.schedule-meeting-form .form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.schedule-meeting-form .form-row {
+  display: grid;
+  gap: 1rem;
+}
+
+.schedule-meeting-form .form-row.two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.schedule-meeting-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.schedule-meeting-form .form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.schedule-meeting-form label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.schedule-meeting-form label .required {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+.schedule-meeting-form input,
+.schedule-meeting-form select,
+.schedule-meeting-form textarea {
+  padding: 0.65rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.schedule-meeting-form input:focus,
+.schedule-meeting-form select:focus,
+.schedule-meeting-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.schedule-meeting-form textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.schedule-meeting-form .form-help {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: -0.15rem;
+}
+
+.modal-error {
+  background-color: #fee;
+  color: #c00;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #fcc;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.modal-actions button {
+  padding: 0.65rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-btn {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.submit-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-height: 95vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  flex-shrink: 0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #333;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: #333;
+}
+
+.modal-form {
+  padding: 1.25rem 1.5rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Additional emails section */
+.email-input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.email-input {
+  flex: 1;
+}
+
+.add-email-btn {
+  padding: 0.65rem 1rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.add-email-btn:hover {
+  background-color: #059669;
+}
+
+.added-emails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.email-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.65rem;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #1e40af;
+}
+
+.email-tag span {
+  font-weight: 500;
+}
+
+.remove-email-btn {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.remove-email-btn:hover {
+  background-color: #fee2e2;
+}
+
+@media (max-width: 768px) {
+  .schedule-meeting-form .form-row.two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .modal-actions button {
+    width: 100%;
+  }
+
+  .email-input-group {
+    flex-direction: column;
+  }
+
+  .add-email-btn {
+    width: 100%;
+  }
+}

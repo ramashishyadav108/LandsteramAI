@@ -1,0 +1,211 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id                String         @id @default(uuid())
+  email             String         @unique
+  password          String?
+  name              String?
+  googleId          String?        @unique
+  isVerified        Boolean        @default(false)
+  verificationToken String?
+  resetToken        String?
+  resetTokenExpiry  DateTime?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  leads             Lead[]
+  refreshTokens     RefreshToken[]
+  lenderMeetings    Meeting[]      @relation("LenderMeetings")
+
+  @@index([email])
+  @@index([googleId])
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  revoked   Boolean  @default(false)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([token])
+  @@index([userId])
+}
+
+model Lead {
+  id                String       @id @default(uuid())
+  firstName         String
+  middleName        String?
+  lastName          String?
+  contactPerson     String?
+  companyName       String?
+  email             String?
+  gmail             String?
+  phone             String?
+  source            LeadSource   @default(WEBSITE)
+  sourceDetails     String?
+  leadType          LeadType?
+  leadPriority      LeadPriority @default(MEDIUM)
+  status            LeadStatus   @default(NEW)
+  industry          String?
+  dealValue         Float?
+  notes             String?
+  assignedRM        String?
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+  createdById       String
+  createdBy         User         @relation(fields: [createdById], references: [id], onDelete: Cascade)
+
+  @@index([status])
+  @@index([source])
+  @@index([createdById])
+  @@index([assignedRM])
+  @@index([leadPriority])
+}
+
+enum LeadStatus {
+  NEW
+  KNOCKOUT_FAILED
+  MEETING_SCHEDULED
+  QUALIFIED
+  PROPOSAL_SENT
+  NEGOTIATION
+  WON
+  LOST
+}
+
+enum LeadSource {
+  WEBSITE
+  REFERRAL
+  LINKEDIN
+  COLD_CALL
+  EMAIL_CAMPAIGN
+  TRADE_SHOW
+  PARTNER
+  OTHER
+}
+
+enum LeadType {
+  INDIVIDUAL
+  BUSINESS
+  CORPORATE
+  GOVERNMENT
+}
+
+enum LeadPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+model Meeting {
+  id                  String        @id @default(uuid())
+  calendlyEventUri    String        @unique
+  calendlyEventId     String        @unique
+  title               String
+  startTime           DateTime
+  endTime             DateTime
+  duration            Int           // Duration in minutes
+  meetingLink         String?       // Zoom/Google Meet link (final link after confirmation)
+  platform            String?       // zoom, google_meet, etc.
+  status              MeetingStatus @default(SCHEDULED)
+  lenderId            String
+  lender              User          @relation("LenderMeetings", fields: [lenderId], references: [id], onDelete: Cascade)
+  borrowerId          String        // Borrower email (not a foreign key)
+  rmEmail             String?       // RM email (optional)
+  additionalEmails    String[]      // Additional emails to notify (array)
+  notes               String?
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @updatedAt
+  canceledAt          DateTime?
+  cancelReason        String?
+  confirmedAt         DateTime?     // When borrower confirmed via Calendly
+
+  @@index([lenderId])
+  @@index([borrowerId])
+  @@index([startTime])
+  @@index([status])
+}
+
+enum MeetingStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELED
+  NO_SHOW
+}
+
+model CustomerBasicInfo {
+  id                    String                @id @default(uuid())
+  leadId                String                @unique
+  applicantType         ApplicantType
+  name                  String                // Full Name for Individual or Business Name for Business
+  entityType            String?               // Individual, Proprietorship, Partnership, etc.
+  industry              String?
+  country               String?
+
+  // Government Registrations - Individual
+  pan                   String?
+  aadhaar               String?
+
+  // Government Registrations - Business
+  businessPan           String?
+  gstin                 String?
+  cin                   String?               // CIN / LLPIN
+  udyam                 String?
+
+  // Contact Details
+  contactPerson         String?
+  phoneNumber           String?
+  email                 String?
+
+  // Key Person Details (for Business)
+  keyPersonPan          String?
+  keyPersonDob          DateTime?
+
+  // Addresses
+  address               String?               // For Individual
+  registeredAddress     String?               // For Business
+  city                  String?
+  state                 String?
+  pincode               String?
+
+  // Ownership/Directors
+  ownershipDirectors    OwnershipDirector[]
+
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  @@index([leadId])
+}
+
+model OwnershipDirector {
+  id                    String              @id @default(uuid())
+  customerBasicInfoId   String
+  customerBasicInfo     CustomerBasicInfo   @relation(fields: [customerBasicInfoId], references: [id], onDelete: Cascade)
+  name                  String
+  pan                   String
+  dob                   DateTime?
+  designation           String
+  createdAt             DateTime            @default(now())
+  updatedAt             DateTime            @updatedAt
+
+  @@index([customerBasicInfoId])
+}
+
+enum ApplicantType {
+  INDIVIDUAL
+  BUSINESS
+}
+
+

@@ -1,0 +1,1 @@
+export { useBasicCustomerInfo } from './useBasicCustomerInfo';

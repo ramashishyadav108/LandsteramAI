@@ -1,0 +1,41 @@
+/* Signup Specific Styles */
+
+.signup-error-message {
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: #fee;
+  color: #c33;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.signup-success-message {
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: #d1fae5;
+  color: #065f46;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.signup-success-email {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.signup-submit-button {
+  width: 100%;
+  background-color: #014023;
+  color: white;
+  font-weight: 600;
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.signup-submit-button:hover {
+  background-color: #15803d;
+}
