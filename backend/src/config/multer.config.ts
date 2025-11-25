@@ -4,7 +4,7 @@ import cloudinary from './cloudinary.config.js';
 
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
-  params: async (req, file) => {
+  params: async (_req, file) => {
     // Determine resource type based on file type
     let resourceType: 'image' | 'raw' = 'raw';
     let format = file.originalname.split('.').pop()?.toLowerCase();
@@ -28,7 +28,7 @@ const upload = multer({
   limits: {
     fileSize: 10 * 1024 * 1024, // 10MB
   },
-  fileFilter: (req, file, cb) => {
+  fileFilter: (_req, file, cb) => {
     const allowedMimeTypes = [
       'image/jpeg',
       'image/png',

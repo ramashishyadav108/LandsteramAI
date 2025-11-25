@@ -36,14 +36,14 @@ export const documentController = {
         status: 'ACTIVE',
       });
 
-      res.status(201).json({
+      return res.status(201).json({
         success: true,
         message: 'Document uploaded successfully',
         data: document,
       });
     } catch (error: any) {
       console.error('Error uploading document:', error);
-      res.status(500).json({
+      return res.status(500).json({
         success: false,
         message: error.message || 'Failed to upload document',
       });
@@ -57,13 +57,13 @@ export const documentController = {
 
       const documents = await documentService.getDocumentsByLeadId(leadId);
 
-      res.status(200).json({
+      return res.status(200).json({
         success: true,
         data: documents,
       });
     } catch (error: any) {
       console.error('Error fetching documents:', error);
-      res.status(500).json({
+      return res.status(500).json({
         success: false,
         message: error.message || 'Failed to fetch documents',
       });
@@ -84,13 +84,13 @@ export const documentController = {
         });
       }
 
-      res.status(200).json({
+      return res.status(200).json({
         success: true,
         data: document,
       });
     } catch (error: any) {
       console.error('Error fetching document:', error);
-      res.status(500).json({
+      return res.status(500).json({
         success: false,
         message: error.message || 'Failed to fetch document',
       });
@@ -109,14 +109,14 @@ export const documentController = {
         status,
       });
 
-      res.status(200).json({
+      return res.status(200).json({
         success: true,
         message: 'Document updated successfully',
         data: document,
       });
     } catch (error: any) {
       console.error('Error updating document:', error);
-      res.status(500).json({
+      return res.status(500).json({
         success: false,
         message: error.message || 'Failed to update document',
       });
@@ -130,13 +130,13 @@ export const documentController = {
 
       await documentService.deleteDocument(id);
 
-      res.status(200).json({
+      return res.status(200).json({
         success: true,
         message: 'Document deleted successfully',
       });
     } catch (error: any) {
       console.error('Error deleting document:', error);
-      res.status(500).json({
+      return res.status(500).json({
         success: false,
         message: error.message || 'Failed to delete document',
       });
@@ -165,14 +165,14 @@ export const documentController = {
         file.mimetype
       );
 
-      res.status(200).json({
+      return res.status(200).json({
         success: true,
         message: 'Document file replaced successfully',
         data: document,
       });
     } catch (error: any) {
       console.error('Error replacing document file:', error);
-      res.status(500).json({
+      return res.status(500).json({
         success: false,
         message: error.message || 'Failed to replace document file',
       });
