@@ -59,7 +59,7 @@
 .modal-header h2 {
   font-size: 24px;
   font-weight: 600;
-  color: #ffffff;
+  color: #125624;
   margin: 0;
 }
 
@@ -204,7 +204,7 @@
 }
 
 .dark-theme .modal-header h2 {
-  color: #f9fafb;
+  color: #e7f2ea;
 }
 
 .dark-theme .modal-close-btn {
@@ -216,13 +216,13 @@
 }
 
 .dark-theme .form-group label {
-  color: #d1d5db;
+  color: #eeeef0;
 }
 
 .dark-theme .form-group input,
 .dark-theme .form-group select,
 .dark-theme .form-group textarea {
-  background-color: #374151;
+  background-color: #696e78;
   border-color: #4b5563;
   color: #f9fafb;
 }

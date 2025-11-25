@@ -1,0 +1,139 @@
+.preview-modal {
+  max-width: 95vw;
+  width: 95vw;
+  max-height: 95vh;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-modal .modal-header {
+  flex-shrink: 0;
+  padding-bottom: 8px;
+}
+
+.preview-modal .modal-header h2 {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.document-meta {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #6b7280;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.icon-btn:hover {
+  color: #111827;
+  background-color: #f3f4f6;
+}
+
+.preview-body {
+  padding: 8px;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  background-color: #f9fafb;
+  min-height: 0;
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  overflow: auto;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.pdf-preview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  flex: 1;
+}
+
+.file-preview-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  text-align: center;
+}
+
+.file-preview-placeholder svg {
+  color: #9ca3af;
+  margin-bottom: 16px;
+}
+
+.placeholder-text {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.placeholder-subtext {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .preview-modal {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .preview-modal .modal-header h2 {
+    font-size: 16px;
+  }
+
+  .document-meta {
+    font-size: 12px;
+  }
+
+  .image-preview {
+    padding: 16px;
+  }
+}
