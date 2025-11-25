@@ -45,7 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
           <polyline points="10 9 9 9 8 9" />
         </svg>
       ),
-      path: '/deal-sourcing',
+      path: '/deal-sourcing/create-leads',
       children: [
         {
           id: 'create-leads',
