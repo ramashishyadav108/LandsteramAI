@@ -1,0 +1,3502 @@
+[
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.189223375,
+    "coefficient": -0.78914,
+    "min": -1e+99,
+    "max": 0.5,
+    "woe": -0.7835832
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.189223375,
+    "coefficient": -0.78914,
+    "min": 0.5,
+    "max": 1.0,
+    "woe": -0.3784487
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.189223375,
+    "coefficient": -0.78914,
+    "min": 1.0,
+    "max": 6.0,
+    "woe": 0.1442115
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.189223375,
+    "coefficient": -0.78914,
+    "min": 6.0,
+    "max": 1e+99,
+    "woe": 0.1770874
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.189223375,
+    "coefficient": -0.78914,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.286783042,
+    "coefficient": -0.493728,
+    "min": -1e+99,
+    "max": 1.0,
+    "woe": -0.6943017
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.286783042,
+    "coefficient": -0.493728,
+    "min": 1.0,
+    "max": 1.58,
+    "woe": -0.6038947
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.286783042,
+    "coefficient": -0.493728,
+    "min": 1.58,
+    "max": 2.0,
+    "woe": 0.1143584
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.286783042,
+    "coefficient": -0.493728,
+    "min": 2.0,
+    "max": 1e+99,
+    "woe": 0.154223
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.286783042,
+    "coefficient": -0.493728,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": -1e+99,
+    "max": 0.0107501,
+    "woe": -0.4702712
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": 0.01075,
+    "max": 2.3015633,
+    "woe": -0.1417915
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": 2.301563,
+    "max": 4.6007469,
+    "woe": -0.1174432
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": 4.600747,
+    "max": 9.7796483,
+    "woe": -0.0892406
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": 9.779648,
+    "max": 18.174802,
+    "woe": 0.2421917
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": 18.1748,
+    "max": 1e+99,
+    "woe": 0.8734635
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 0.879048911,
+    "coefficient": -0.698046,
+    "min": -1e+99,
+    "max": 0.25,
+    "woe": 0.3879557
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 0.879048911,
+    "coefficient": -0.698046,
+    "min": 0.25,
+    "max": 0.5,
+    "woe": 0.3039486
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 0.879048911,
+    "coefficient": -0.698045,
+    "min": 0.5,
+    "max": 1.0,
+    "woe": -0.0770957
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 0.879048911,
+    "coefficient": -0.698046,
+    "min": 1.0,
+    "max": 1e+99,
+    "woe": -0.6367115
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 0.879048911,
+    "coefficient": -0.698045,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 1.263252667,
+    "coefficient": -0.642275,
+    "min": -1e+99,
+    "max": 0.2,
+    "woe": 0.8972425
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 1.263252667,
+    "coefficient": -0.642275,
+    "min": 0.2,
+    "max": 0.6,
+    "woe": -0.1999373
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 1.263252667,
+    "coefficient": -0.642275,
+    "min": 0.6,
+    "max": 2.5,
+    "woe": 0.0742146
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 1.263252667,
+    "coefficient": -0.642275,
+    "min": 2.5,
+    "max": 1e+99,
+    "woe": 0.4602314
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 1.263252667,
+    "coefficient": -0.642275,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 0.008528425,
+    "coefficient": -0.420713,
+    "min": -1e+99,
+    "max": 0.02,
+    "woe": -0.3199272
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 0.008528425,
+    "coefficient": -0.420713,
+    "min": 0.02,
+    "max": 0.1,
+    "woe": 0.2193236
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 0.008528425,
+    "coefficient": -0.420713,
+    "min": 0.1,
+    "max": 0.2,
+    "woe": 0.2966799
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 0.008528425,
+    "coefficient": -0.420713,
+    "min": 0.2,
+    "max": 1e+99,
+    "woe": 0.4355631
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 0.008528425,
+    "coefficient": -0.420718,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": -1e+99,
+    "max": 15.0,
+    "woe": 0.6696358
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": 15.0,
+    "max": 30.0,
+    "woe": 0.3424484
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": 30.0,
+    "max": 90.0,
+    "woe": 0.2069099
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": 90.0,
+    "max": 150.0,
+    "woe": -0.1922609
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": 150.0,
+    "max": 1e+99,
+    "woe": 0.599991
+  },
+  {
+    "sheet": "2. Financial Scorecard (2)",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Application Model",
+    "variable": NaN,
+    "coefficient": NaN,
+    "min": NaN,
+    "max": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "Application",
+    "variable": 0.353470869,
+    "coefficient": -2.0704088,
+    "min": 0,
+    "max": 0.02,
+    "woe": -0.069
+  },
+  {
+    "sheet": "Application",
+    "variable": 0.353470869,
+    "coefficient": -2.0704088,
+    "min": 0.02,
+    "max": 0.09,
+    "woe": -0.0429
+  },
+  {
+    "sheet": "Application",
+    "variable": 0.353470869,
+    "coefficient": -2.0704088,
+    "min": 0.09,
+    "max": 0.3,
+    "woe": -0.0035
+  },
+  {
+    "sheet": "Application",
+    "variable": 0.353470869,
+    "coefficient": -2.0704088,
+    "min": 0.3,
+    "max": 999999999999999967336168804116691273849533185806555472917961779471295845921727862608739868455469056,
+    "woe": 0.0845
+  },
+  {
+    "sheet": "Application",
+    "variable": 0.353470869,
+    "coefficient": 2.0704088,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Application",
+    "variable": "MANUFACTURING",
+    "coefficient": -0.8335912,
+    "min": "TRADING",
+    "max": "TRADING",
+    "woe": 0.2917
+  },
+  {
+    "sheet": "Application",
+    "variable": "MANUFACTURING",
+    "coefficient": -0.8335912,
+    "min": " MANUFACTURING",
+    "max": "MANUFACTURING",
+    "woe": -0.2048
+  },
+  {
+    "sheet": "Application",
+    "variable": "MANUFACTURING",
+    "coefficient": -0.8335912,
+    "min": " SERVICES",
+    "max": "SERVICES",
+    "woe": 0.3661
+  },
+  {
+    "sheet": "Application",
+    "variable": "MANUFACTURING",
+    "coefficient": -0.8335912,
+    "min": " OTHERS",
+    "max": "OTHERS",
+    "woe": 0.299
+  },
+  {
+    "sheet": "Application",
+    "variable": "MANUFACTURING",
+    "coefficient": -0.8335912,
+    "min": " NA",
+    "max": " NA",
+    "woe": 0.0
+  },
+  {
+    "sheet": "Application",
+    "variable": "HYBRID/MULTIPLE TYPE",
+    "coefficient": -0.9627465,
+    "min": " STOCKS",
+    "max": "STOCKS",
+    "woe": 1.249
+  },
+  {
+    "sheet": "Application",
+    "variable": "HYBRID/MULTIPLE TYPE",
+    "coefficient": -0.9627455,
+    "min": " HYBRID/MULTIPLE",
+    "max": "HYBRID/MULTIPLE",
+    "woe": 0.0797
+  },
+  {
+    "sheet": "Application",
+    "variable": "HYBRID/MULTIPLE TYPE",
+    "coefficient": -0.9627465,
+    "min": " MACHINERY",
+    "max": "MACHINERY",
+    "woe": -0.1678
+  },
+  {
+    "sheet": "Application",
+    "variable": "HYBRID/MULTIPLE TYPE",
+    "coefficient": -0.9627455,
+    "min": " MORTGAGE",
+    "max": "MORTGAGE",
+    "woe": -4327.0
+  },
+  {
+    "sheet": "Application",
+    "variable": "HYBRID/MULTIPLE TYPE",
+    "coefficient": -9627465.0,
+    "min": " OTHERS",
+    "max": "OTHERS",
+    "woe": 0.1362
+  },
+  {
+    "sheet": "Application",
+    "variable": "HYBRID/MULTIPLE TYPE",
+    "coefficient": -0.9527465,
+    "min": " MISSING",
+    "max": "MISSING",
+    "woe": 0.0
+  },
+  {
+    "sheet": "Application",
+    "variable": "HYBRID/MULTIPLE TYPE",
+    "coefficient": -0.9627465,
+    "min": " NA",
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Application",
+    "variable": "CO'S-PRIVATE",
+    "coefficient": -1.0774083,
+    "min": "PARTNERSHIP",
+    "max": "PARTNERSHIP",
+    "woe": 0.3382
+  },
+  {
+    "sheet": "Application",
+    "variable": "CO'S-PRIVATE",
+    "coefficient": -10774083.0,
+    "min": "PROPRIETORSHIP",
+    "max": "PROPRIETORSHIP",
+    "woe": -0.0863
+  },
+  {
+    "sheet": "Application",
+    "variable": "CO'S-PRIVATE",
+    "coefficient": -10774083.0,
+    "min": "CO'S-PRIVATE",
+    "max": "CO'S-PRIVATE",
+    "woe": -0.1191
+  },
+  {
+    "sheet": "Application",
+    "variable": "CO'S-PRIVATE",
+    "coefficient": -10774083.0,
+    "min": "OTHERS",
+    "max": "OTHERS",
+    "woe": -0.1053
+  },
+  {
+    "sheet": "Application",
+    "variable": "CO'S-PRIVATE",
+    "coefficient": -10774083.0,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Application",
+    "variable": 0,
+    "coefficient": -1.1287911,
+    "min": 0,
+    "max": 0.5,
+    "woe": -0.1416
+  },
+  {
+    "sheet": "Application",
+    "variable": 0,
+    "coefficient": -1.1287911,
+    "min": 0.5,
+    "max": 2,
+    "woe": -0.0691
+  },
+  {
+    "sheet": "Application",
+    "variable": 0,
+    "coefficient": -1.1287911,
+    "min": 2,
+    "max": 5,
+    "woe": 0.0809
+  },
+  {
+    "sheet": "Application",
+    "variable": 0,
+    "coefficient": -1.1287911,
+    "min": 5,
+    "max": 999999999999999967336168804116691273849533185806555472917961779471295845921727862608739868455469056,
+    "woe": 0.2004
+  },
+  {
+    "sheet": "Application",
+    "variable": 0,
+    "coefficient": -1.1287911,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.8990312,
+    "min": -1e+99,
+    "max": 0.25,
+    "woe": -0.1505468
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.8990312,
+    "min": 0.25,
+    "max": 0.5,
+    "woe": 0.5575997
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.8990312,
+    "min": 0.5,
+    "max": 1e+99,
+    "woe": 1.5669007
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.8990312,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -1.4478949,
+    "min": -1e+99,
+    "max": 0.02931627,
+    "woe": 0.0534684
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -1.4478949,
+    "min": 0.02931627,
+    "max": 0.09878048,
+    "woe": -0.1572002
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -1.4478949,
+    "min": 0.09878048,
+    "max": 1e+99,
+    "woe": -0.4945224
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -1.4478949,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.8526208,
+    "min": -1e+99,
+    "max": 0.2,
+    "woe": 0.9460741
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.8526208,
+    "min": 0.2,
+    "max": 0.5,
+    "woe": 0.6217895
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.8526208,
+    "min": 0.5,
+    "max": 5.0,
+    "woe": 0.4518071
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.8526208,
+    "min": 5.0,
+    "max": 1e+99,
+    "woe": -0.295128
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.8526208,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -1.138042,
+    "min": -1e+99,
+    "max": 2.0,
+    "woe": 0.0881643
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -1.138042,
+    "min": 2.0,
+    "max": 2.0,
+    "woe": -0.4862236
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -1.138042,
+    "min": 2.0,
+    "max": 1e+99,
+    "woe": -0.4862236
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -1.138042,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.9627996,
+    "min": -1e+99,
+    "max": 0.07915658,
+    "woe": 1.064964
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.9627996,
+    "min": 0.07915658,
+    "max": 0.78055558,
+    "woe": 0.129313
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.9627996,
+    "min": 0.78055558,
+    "max": 1e+99,
+    "woe": -0.1383283
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.9627996,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.4268153,
+    "min": -1e+99,
+    "max": 1e-10,
+    "woe": -0.2918493
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.4268153,
+    "min": 1e-10,
+    "max": 1.01,
+    "woe": 0.0589094
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.4268153,
+    "min": 1.01,
+    "max": 1e+99,
+    "woe": 0.2244582
+  },
+  {
+    "sheet": "Internal Deposit",
+    "variable": NaN,
+    "coefficient": -0.4268153,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.189223375,
+    "coefficient": -0.78914,
+    "min": -1e+99,
+    "max": 0.5,
+    "woe": -0.7835832
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.189223375,
+    "coefficient": -0.78914,
+    "min": 0.5,
+    "max": 1.0,
+    "woe": -0.3784487
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.189223375,
+    "coefficient": -0.78914,
+    "min": 1.0,
+    "max": 6.0,
+    "woe": 0.1442115
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.189223375,
+    "coefficient": -0.78914,
+    "min": 6.0,
+    "max": 1e+99,
+    "woe": 0.1770874
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.189223375,
+    "coefficient": -0.78914,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.286783042,
+    "coefficient": -0.493728,
+    "min": -1e+99,
+    "max": 1.0,
+    "woe": -0.6943017
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.286783042,
+    "coefficient": -0.493728,
+    "min": 1.0,
+    "max": 1.58,
+    "woe": -0.6038947
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.286783042,
+    "coefficient": -0.493728,
+    "min": 1.58,
+    "max": 2.0,
+    "woe": 0.1143584
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.286783042,
+    "coefficient": -0.493728,
+    "min": 2.0,
+    "max": 1e+99,
+    "woe": 0.154223
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.286783042,
+    "coefficient": -0.493728,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": -1e+99,
+    "max": 0.0107501,
+    "woe": -0.4702712
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": 0.01075,
+    "max": 2.3015633,
+    "woe": -0.1417915
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": 2.301563,
+    "max": 4.6007469,
+    "woe": -0.1174432
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": 4.600747,
+    "max": 9.7796483,
+    "woe": -0.0892406
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": 9.779648,
+    "max": 18.174802,
+    "woe": 0.2421917
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": 18.1748,
+    "max": 1e+99,
+    "woe": 0.8734635
+  },
+  {
+    "sheet": "Financial",
+    "variable": 2.53981019,
+    "coefficient": -0.508657,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Financial",
+    "variable": 0.879048911,
+    "coefficient": -0.698046,
+    "min": -1e+99,
+    "max": 0.25,
+    "woe": 0.3879557
+  },
+  {
+    "sheet": "Financial",
+    "variable": 0.879048911,
+    "coefficient": -0.698046,
+    "min": 0.25,
+    "max": 0.5,
+    "woe": 0.3039486
+  },
+  {
+    "sheet": "Financial",
+    "variable": 0.879048911,
+    "coefficient": -0.698045,
+    "min": 0.5,
+    "max": 1.0,
+    "woe": -0.0770957
+  },
+  {
+    "sheet": "Financial",
+    "variable": 0.879048911,
+    "coefficient": -0.698046,
+    "min": 1.0,
+    "max": 1e+99,
+    "woe": -0.6367115
+  },
+  {
+    "sheet": "Financial",
+    "variable": 0.879048911,
+    "coefficient": -0.698045,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Financial",
+    "variable": 1.263252667,
+    "coefficient": -0.642275,
+    "min": -1e+99,
+    "max": 0.2,
+    "woe": 0.8972425
+  },
+  {
+    "sheet": "Financial",
+    "variable": 1.263252667,
+    "coefficient": -0.642275,
+    "min": 0.2,
+    "max": 0.6,
+    "woe": -0.1999373
+  },
+  {
+    "sheet": "Financial",
+    "variable": 1.263252667,
+    "coefficient": -0.642275,
+    "min": 0.6,
+    "max": 2.5,
+    "woe": 0.0742146
+  },
+  {
+    "sheet": "Financial",
+    "variable": 1.263252667,
+    "coefficient": -0.642275,
+    "min": 2.5,
+    "max": 1e+99,
+    "woe": 0.4602314
+  },
+  {
+    "sheet": "Financial",
+    "variable": 1.263252667,
+    "coefficient": -0.642275,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Financial",
+    "variable": 0.008528425,
+    "coefficient": -0.420713,
+    "min": -1e+99,
+    "max": 0.02,
+    "woe": -0.3199272
+  },
+  {
+    "sheet": "Financial",
+    "variable": 0.008528425,
+    "coefficient": -0.420713,
+    "min": 0.02,
+    "max": 0.1,
+    "woe": 0.2193236
+  },
+  {
+    "sheet": "Financial",
+    "variable": 0.008528425,
+    "coefficient": -0.420713,
+    "min": 0.1,
+    "max": 0.2,
+    "woe": 0.2966799
+  },
+  {
+    "sheet": "Financial",
+    "variable": 0.008528425,
+    "coefficient": -0.420713,
+    "min": 0.2,
+    "max": 1e+99,
+    "woe": 0.4355631
+  },
+  {
+    "sheet": "Financial",
+    "variable": 0.008528425,
+    "coefficient": -0.420718,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Financial",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": -1e+99,
+    "max": 15.0,
+    "woe": 0.6696358
+  },
+  {
+    "sheet": "Financial",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": 15.0,
+    "max": 30.0,
+    "woe": 0.3424484
+  },
+  {
+    "sheet": "Financial",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": 30.0,
+    "max": 90.0,
+    "woe": 0.2069099
+  },
+  {
+    "sheet": "Financial",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": 90.0,
+    "max": 150.0,
+    "woe": -0.1922609
+  },
+  {
+    "sheet": "Financial",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": 150.0,
+    "max": 1e+99,
+    "woe": 0.599991
+  },
+  {
+    "sheet": "Financial",
+    "variable": 147.800339,
+    "coefficient": -0.473057,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.8889165,
+    "min": -1e+99,
+    "max": 2.5,
+    "woe": 0.1317819
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.8889165,
+    "min": 2.5,
+    "max": 1e+99,
+    "woe": 0.1711335
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.8889165,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 102.44444444,
+    "coefficient": -0.7473817,
+    "min": -1e+99,
+    "max": 24.0,
+    "woe": -0.5419962
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 102.44444444,
+    "coefficient": -0.7473817,
+    "min": 24.0,
+    "max": 92.09,
+    "woe": -0.0057704
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 102.44444444,
+    "coefficient": 0.7473817,
+    "min": 92.09,
+    "max": 100.0,
+    "woe": 0.0582843
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 102.44444444,
+    "coefficient": -0.7473817,
+    "min": 100.0,
+    "max": 140.0,
+    "woe": 0.1225913
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 102.44444444,
+    "coefficient": -0.7473817,
+    "min": 140.0,
+    "max": 1e+99,
+    "woe": 0.8714491
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": 0.7473817,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.0442629,
+    "min": -1e+99,
+    "max": 1.0,
+    "woe": 0.5329749
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.0442629,
+    "min": 1.0,
+    "max": 7.0,
+    "woe": -0.0860272
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.0442629,
+    "min": 7.0,
+    "max": 1e+99,
+    "woe": -0.1006989
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": 1.0442629,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": NaN,
+    "coefficient": -0.5225601,
+    "min": 0.0,
+    "max": 1e-06,
+    "woe": -0.1548425
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": NaN,
+    "coefficient": -0.5225601,
+    "min": 1e-06,
+    "max": 4.0,
+    "woe": -0.1123985
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": NaN,
+    "coefficient": -0.5225601,
+    "min": 4.0,
+    "max": 18.0,
+    "woe": -0.0092647
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": NaN,
+    "coefficient": -0.5225601,
+    "min": 18.0,
+    "max": 1e+99,
+    "woe": 0.2501277
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": NaN,
+    "coefficient": -0.5225601,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.949469002,
+    "coefficient": -1.0556773,
+    "min": 0.0,
+    "max": 1e-06,
+    "woe": 0.2514528
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.949469002,
+    "coefficient": 1.0556773,
+    "min": 1e-06,
+    "max": 1.0,
+    "woe": 0.104194
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.949469002,
+    "coefficient": -1.0556773,
+    "min": 1.0,
+    "max": 1e+99,
+    "woe": -0.1424219
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.949469002,
+    "coefficient": -1.0556773,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.0029961,
+    "min": -1e+99,
+    "max": -0.0002,
+    "woe": 0.5278084
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.0029961,
+    "min": -0.0002,
+    "max": 0.7773137,
+    "woe": 0.0091777
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.0029961,
+    "min": 0.777314,
+    "max": 2.458469,
+    "woe": 0.0030979
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.0029961,
+    "min": 2.458469,
+    "max": 1e+99,
+    "woe": -0.6348629
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 0.0,
+    "coefficient": -1.0029961,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 1.0,
+    "coefficient": -1.0054407,
+    "min": -1e+99,
+    "max": 0.159545,
+    "woe": -0.2295469
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 1.0,
+    "coefficient": -1.0054407,
+    "min": 0.159545,
+    "max": 0.707108,
+    "woe": -0.0422408
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 1.0,
+    "coefficient": -1.0054407,
+    "min": 0.707108,
+    "max": 0.764706,
+    "woe": 0.2692737
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 1.0,
+    "coefficient": -1.0054407,
+    "min": 0.764706,
+    "max": 1e+99,
+    "woe": 0.3560977
+  },
+  {
+    "sheet": "Bureau Individual",
+    "variable": 1.0,
+    "coefficient": -1.0054407,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": 0.288002651,
+    "coefficient": -1.0469705,
+    "min": -1e+99,
+    "max": 0.25,
+    "woe": 1.1775686
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -1.0469705,
+    "min": 0.25,
+    "max": 0.75,
+    "woe": 0.9080776
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -1.0469705,
+    "min": 0.75,
+    "max": 1,
+    "woe": 0.5774407
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -1.0469705,
+    "min": 1.0,
+    "max": 999999999999999967336168804116691273849533185806555472917961779471295845921727862608739868455469056,
+    "woe": -0.6684466
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -1.0469705,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.7052159,
+    "min": -1e-99,
+    "max": 0.5,
+    "woe": 0.1277082
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.7052159,
+    "min": 0.5,
+    "max": 2.5,
+    "woe": -0.1776699
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.7052159,
+    "min": 2.5,
+    "max": 999999999999999967336168804116691273849533185806555472917961779471295845921727862608739868455469056,
+    "woe": -1.0894255
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.7052159,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.6993027,
+    "min": -1e-99,
+    "max": 3,
+    "woe": -0.9272485
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.6993027,
+    "min": 3.0,
+    "max": 10,
+    "woe": -0.287079
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.6993027,
+    "min": 10.0,
+    "max": ".1.00E+99",
+    "woe": 0.5817999
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.6993027,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -2.2392974,
+    "min": -1e-99,
+    "max": 1,
+    "woe": -0.1420157
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -2.2392974,
+    "min": 1.0,
+    "max": 60,
+    "woe": 0.0464808
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -2.2392974,
+    "min": 60.0,
+    "max": 150,
+    "woe": 0.0903246
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -2.2392974,
+    "min": 150.0,
+    "max": 999999999999999967336168804116691273849533185806555472917961779471295845921727862608739868455469056,
+    "woe": 0.132143
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -2.2392974,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.9757448,
+    "min": 0.0,
+    "max": 0.5,
+    "woe": 0.4150234
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.9757448,
+    "min": 0.5,
+    "max": 1.5,
+    "woe": -0.0437677
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.9757448,
+    "min": 1.5,
+    "max": 2.5,
+    "woe": -0.1085963
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.9757448,
+    "min": 2.5,
+    "max": 999999999999999967336168804116691273849533185806555472917961779471295845921727862608739868455469056,
+    "woe": -0.6010727
+  },
+  {
+    "sheet": "Bureau Commercial",
+    "variable": NaN,
+    "coefficient": -0.9757448,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": -1e+99,
+    "max": 0.015075,
+    "woe": 0.036483005
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 0.015075,
+    "max": 0.069164,
+    "woe": 0.058593918
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 0.069164,
+    "max": 0.150901,
+    "woe": 0.072597496
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 0.150901,
+    "max": 1e+99,
+    "woe": 0.09839356
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": -1e+99,
+    "max": 0.33,
+    "woe": 0.038694097
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 0.33,
+    "max": 0.53,
+    "woe": 0.03611449
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 0.53,
+    "max": 1.75,
+    "woe": 0.031323792
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 1.75,
+    "max": 1e+99,
+    "woe": 0.007370304
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.2,
+    "min": -1e+99,
+    "max": 0.03,
+    "woe": 0.029455278
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.2,
+    "min": 0.03,
+    "max": 0.1,
+    "woe": 0.035513368
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.2,
+    "min": 0.1,
+    "max": 1e+99,
+    "woe": 0.047421831
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.2,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": -1e+99,
+    "max": 0.25,
+    "woe": 0.035306655
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 0.25,
+    "max": 0.5,
+    "woe": 0.018540538
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 0.5,
+    "max": 1e+99,
+    "woe": 0.007044928
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "min": -1e+99,
+    "max": 0.165,
+    "woe": 0.042831683
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "min": 0.165,
+    "max": 1e+99,
+    "woe": 0.028794409
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": -1e+99,
+    "max": 0.0,
+    "woe": 0.026690425
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 0.0,
+    "max": 9.0,
+    "woe": 0.030977351
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 9.0,
+    "max": 20.0,
+    "woe": 0.032967074
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": 20.0,
+    "max": 1e+99,
+    "woe": 0.038940859
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "min": -1e+99,
+    "max": 0.0,
+    "woe": 0.034555811
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "min": 0.0,
+    "max": 1.01,
+    "woe": 0.032941054
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "min": 1.01,
+    "max": 1e+99,
+    "woe": 0.027773829
+  },
+  {
+    "sheet": "Cash Flow",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "min": NaN,
+    "max": NaN,
+    "woe": 0.0
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.064,
+    "woe": -0.2666
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.064,
+    "woe": -0.2666
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.054,
+    "woe": 1.8993
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.064,
+    "woe": 4.0652
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": -1.2974
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.05,
+    "woe": -0.4366
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.05,
+    "woe": 0.4242
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.05,
+    "woe": 1.285
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.05,
+    "woe": 2.1458
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.049,
+    "woe": -0.7966
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.049,
+    "woe": -0.7966
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.049,
+    "woe": -0.7966
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.049,
+    "woe": 0.7561
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.049,
+    "woe": 1.5324
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.049,
+    "woe": -0.0203
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.05,
+    "woe": -0.6988
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.05,
+    "woe": 0.6988
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.05,
+    "woe": 0.6988
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.05,
+    "woe": 1.4271
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.05,
+    "woe": 1.4271
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.026,
+    "woe": -0.5147
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.026,
+    "woe": -0.5147
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.026,
+    "woe": 0.5147
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.026,
+    "woe": 1.0802
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.026,
+    "woe": 2.6751
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.029,
+    "woe": -0.9132
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.029,
+    "woe": -0.9132
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.029,
+    "woe": 0.274
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.029,
+    "woe": 1.4612
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.031,
+    "woe": -1.5167
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.031,
+    "woe": -0.4546
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.031,
+    "woe": -0.4546
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.031,
+    "woe": -0.4546
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.031,
+    "woe": 0.6075
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.031,
+    "woe": 1.6697
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.028,
+    "woe": -0.2951
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.028,
+    "woe": 1.6176
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.028,
+    "woe": 3.5304
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.028,
+    "woe": 3.5304
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.017,
+    "woe": -0.2687
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.017,
+    "woe": -0.268
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.017,
+    "woe": 2.3838
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.017,
+    "woe": 5.0363
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.056,
+    "woe": -0.6673
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.056,
+    "woe": 0.6562
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.056,
+    "woe": 1.9796
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.056,
+    "woe": 1.9796
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.044,
+    "woe": -0.525
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.044,
+    "woe": 1.6498
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.044,
+    "woe": 3.8247
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.044,
+    "woe": 3.8247
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.039,
+    "woe": -0.6961
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.039,
+    "woe": 1.1181
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.039,
+    "woe": 1.1181
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.039,
+    "woe": 2.9323
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.039,
+    "woe": 0.0
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.039,
+    "woe": 0.0
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.055,
+    "woe": -0.9299
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.055,
+    "woe": 0.7748
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.055,
+    "woe": 0.7748
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.055,
+    "woe": 2.4795
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.055,
+    "woe": -0.558
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.055,
+    "woe": -0.558
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.055,
+    "woe": 0.6305
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.055,
+    "woe": 1.819
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.055,
+    "woe": 1.819
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.055,
+    "woe": 3.0075
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.042,
+    "woe": -1.2028
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.042,
+    "woe": 0.1948
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.042,
+    "woe": 0.1948
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.042,
+    "woe": 1.5925
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.042,
+    "woe": 1.5925
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.042,
+    "woe": 2.9901
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.029,
+    "woe": -0.6041
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.029,
+    "woe": 1.5276
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.029,
+    "woe": 3.6593
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.03,
+    "woe": -0.3137
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.03,
+    "woe": -0.3137
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.03,
+    "woe": 2.5966
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.03,
+    "woe": 2.5966
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.03,
+    "woe": 5.507
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.022,
+    "woe": -0.2981
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.022,
+    "woe": 3.1242
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.022,
+    "woe": 3.1242
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.022,
+    "woe": 6.5465
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.033,
+    "woe": 2.4139
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.033,
+    "woe": 0.4403
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.033,
+    "woe": 0.4403
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.033,
+    "woe": 0.4403
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.033,
+    "woe": 0.4403
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.033,
+    "woe": -1.5333
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.034,
+    "woe": 0.3015
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.034,
+    "woe": 2.7811
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.034,
+    "woe": 5.8637
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.034,
+    "woe": 5.8637
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.059,
+    "woe": -0.4376
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.059,
+    "woe": 21795.0
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.059,
+    "woe": 2.1795
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.059,
+    "woe": 2.1795
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.059,
+    "woe": 4.7967
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.037,
+    "woe": -0.5339
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.037,
+    "woe": 1.3526
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.037,
+    "woe": 3.239
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.037,
+    "woe": 3.239
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.037,
+    "woe": 0.0
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.047,
+    "woe": -0.8628
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.047,
+    "woe": -0.8628
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.047,
+    "woe": 1.155
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.047,
+    "woe": 1.155
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.075,
+    "woe": -1.341
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.075,
+    "woe": 0.212
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.075,
+    "woe": 0.212
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.075,
+    "woe": 1.765
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": 0.075,
+    "woe": 3.3181
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "QCA",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.17194175,
+    "woe": -0.1924
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.17194175,
+    "woe": 2.2779
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.17194175,
+    "woe": 2.2779
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.17194175,
+    "woe": -2.6628
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.08673152,
+    "woe": -0.69
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.08673152,
+    "woe": 1.45
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.08673152,
+    "woe": -0.69
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.20029329,
+    "woe": 0.52
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.20029329,
+    "woe": -1.89
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.20029329,
+    "woe": 0.52
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.19088611,
+    "woe": -0.57
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.19088611,
+    "woe": -0.57
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.19088611,
+    "woe": 1.43
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.19088611,
+    "woe": 3.43
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.18943313,
+    "woe": -1.63
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.18943313,
+    "woe": -0.72
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.18943313,
+    "woe": 0.18
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.18943313,
+    "woe": 0.18
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.18943313,
+    "woe": 1.09
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.18943313,
+    "woe": 1.0915
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.16071421,
+    "woe": -0.37
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.16071421,
+    "woe": 1.41
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.16071421,
+    "woe": 3.18
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": 0.16071421,
+    "woe": 3.18
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "7.Industry QCA Manufacturing",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.4,
+    "woe": 0.8163
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.4,
+    "woe": 0.8163
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.4,
+    "woe": -1.2755
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.4,
+    "woe": 0.2296
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.21,
+    "woe": -0.1922
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.21,
+    "woe": -0.1922
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.21,
+    "woe": 5.1326
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.21,
+    "woe": 0.0
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.22,
+    "woe": -0.8593
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.22,
+    "woe": -0.8593
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.22,
+    "woe": 1.1455
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.22,
+    "woe": 1.1455
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.18,
+    "woe": -1.2235
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.18,
+    "woe": -1.2235
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.18,
+    "woe": 1.9005
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.18,
+    "woe": 1.9005
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": 0.18,
+    "woe": 0.3385
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Services",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.271,
+    "woe": -0.2443
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.271,
+    "woe": -0.2443
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.271,
+    "woe": -1.4803
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.271,
+    "woe": -1.4803
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.271,
+    "woe": 0.9916
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.271,
+    "woe": 0.9916
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "woe": -0.9533
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "woe": -0.9533
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "woe": 1.0348
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "woe": 1.0348
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.1,
+    "woe": 1.0348
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "woe": -0.8668
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "woe": -0.8668
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.15,
+    "woe": 1.1392
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.14,
+    "woe": -1.1152
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.14,
+    "woe": 0.0845
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.14,
+    "woe": 1.2841
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.14,
+    "woe": 2.4837
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.2,
+    "woe": 0.6393
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.2,
+    "woe": -0.9106
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.2,
+    "woe": -0.1356
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.2,
+    "woe": -0.9106
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.2,
+    "woe": 1.4143
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.14,
+    "woe": -0.6135
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.14,
+    "woe": 1.1777
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.14,
+    "woe": 1.1777
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": 0.14,
+    "woe": 2.9688
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  },
+  {
+    "sheet": "8.Industry QCA Trading",
+    "variable": NaN,
+    "coefficient": NaN,
+    "woe": NaN
+  }
+]

@@ -18,6 +18,14 @@ interface MenuItem {
 const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [expandedMenus, setExpandedMenus] = React.useState<string[]>([]);
+
+  // Keep deal-sourcing expanded if we're on any of its child routes
+  React.useEffect(() => {
+    if (location.pathname.startsWith('/deal-sourcing/')) {
+      setExpandedMenus(prev => prev.includes('deal-sourcing') ? prev : [...prev, 'deal-sourcing']);
+    }
+  }, [location.pathname]);
 
   const menuItems: MenuItem[] = [
     {
@@ -136,6 +144,16 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
     navigate(path);
   };
 
+  const toggleMenu = (itemId: string, hasChildren: boolean) => {
+    if (hasChildren) {
+      setExpandedMenus(prev => 
+        prev.includes(itemId) 
+          ? prev.filter(id => id !== itemId)
+          : [...prev, itemId]
+      );
+    }
+  };
+
   return (
     <aside className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-header">
@@ -173,18 +191,29 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
             <li key={item.id} className="sidebar-menu-item">
               <button
                 className={`sidebar-menu-button ${isParentActive(item) ? 'active' : ''}`}
-                onClick={() => handleNavigation(item.path)}
+                onClick={() => {
+                  if (item.children) {
+                    // Only toggle the submenu, don't navigate
+                    toggleMenu(item.id, true);
+                  } else {
+                    // Navigate for items without children
+                    handleNavigation(item.path);
+                  }
+                }}
               >
                 <span className="menu-icon">{item.icon}</span>
                 {!collapsed && <span className="menu-label">{item.label}</span>}
               </button>
-              {!collapsed && item.children && (
+              {!collapsed && item.children && expandedMenus.includes(item.id) && (
                 <ul className="sidebar-submenu">
                   {item.children.map((child) => (
                     <li key={child.id} className="sidebar-submenu-item">
                       <button
                         className={`sidebar-submenu-button ${isActive(child.path) ? 'active' : ''}`}
-                        onClick={() => handleNavigation(child.path)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleNavigation(child.path);
+                        }}
                       >
                         <span className="submenu-icon">{child.icon}</span>
                         <span className="submenu-label">{child.label}</span>

@@ -9,6 +9,7 @@ import VerifyEmail from './components/Auth/VerifyEmail';
 import { Dashboard } from './components/Dashboard';
 import { LeadsPage, LeadDetailsPage, AddLeadPage } from './components/Leads';
 import { MeetingsPage } from './components/Meetings';
+import { ApplicationManagementPage } from './components/ApplicationManagement';
 
 const App: React.FC = () => {
   return (
@@ -31,6 +32,8 @@ const App: React.FC = () => {
           <Route path="/leads/:id" element={<LeadDetailsPage />} />
           {/* Meetings */}
           <Route path="/meetings" element={<MeetingsPage />} />
+          {/* Application Management */}
+          <Route path="/application-management" element={<ApplicationManagementPage />} />
         </Routes>
       </Router>
     </ThemeProvider>
