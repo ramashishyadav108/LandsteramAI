@@ -201,21 +201,18 @@ const AddLeadPage: React.FC = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="leadType">Lead Type</label>
-                  <input
-                    type="text"
+                  <select
                     id="leadType"
                     name="leadType"
                     value={formData.leadType || ''}
                     onChange={handleChange}
-                    placeholder=""
-                    list="leadTypeOptions"
-                  />
-                  <datalist id="leadTypeOptions">
+                  >
+                    <option value="">Select Lead Type</option>
                     <option value="INDIVIDUAL">Individual</option>
                     <option value="BUSINESS">Business</option>
                     <option value="CORPORATE">Corporate</option>
                     <option value="GOVERNMENT">Government</option>
-                  </datalist>
+                  </select>
                 </div>
               </div>
 
@@ -236,34 +233,26 @@ const AddLeadPage: React.FC = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="leadPriority">Lead Priority</label>
-                  <input
-                    type="text"
+                  <select
                     id="leadPriority"
                     name="leadPriority"
                     value={formData.leadPriority || ''}
                     onChange={handleChange}
-                    placeholder=""
-                    list="leadPriorityOptions"
-                  />
-                  <datalist id="leadPriorityOptions">
+                  >
                     <option value="LOW">Low</option>
                     <option value="MEDIUM">Medium</option>
                     <option value="HIGH">High</option>
                     <option value="URGENT">Urgent</option>
-                  </datalist>
+                  </select>
                 </div>
                 <div className="form-group">
                   <label htmlFor="status">Lead Status</label>
-                  <input
-                    type="text"
+                  <select
                     id="status"
                     name="status"
                     value={formData.status || ''}
                     onChange={handleChange}
-                    placeholder=""
-                    list="leadStatusOptions"
-                  />
-                  <datalist id="leadStatusOptions">
+                  >
                     <option value="NEW">New</option>
                     <option value="KNOCKOUT_FAILED">Knockout Failed</option>
                     <option value="MEETING_SCHEDULED">Meeting Scheduled</option>
@@ -272,7 +261,7 @@ const AddLeadPage: React.FC = () => {
                     <option value="NEGOTIATION">Negotiation</option>
                     <option value="WON">Won</option>
                     <option value="LOST">Lost</option>
-                  </datalist>
+                  </select>
                 </div>
               </div>
 

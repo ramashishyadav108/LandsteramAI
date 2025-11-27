@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { meetingService, CreateMeetingData } from '../../services/meeting.service';
+import DateTimePicker from './DateTimePicker';
 import './ScheduleMeetingModal.css';
 
 interface ScheduleMeetingModalProps {
@@ -255,13 +256,10 @@ const ScheduleMeetingModal: React.FC<ScheduleMeetingModalProps> = ({
                 <label htmlFor="startTime">
                   Meeting Date & Time <span className="required">*</span>
                 </label>
-                <input
-                  type="datetime-local"
-                  id="startTime"
-                  name="startTime"
+                <DateTimePicker
                   value={formData.startTime}
-                  onChange={handleChange}
-                  min={getMinDateTime()}
+                  onChange={(value) => setFormData(prev => ({ ...prev, startTime: value }))}
+                  minDateTime={getMinDateTime()}
                   required
                 />
               </div>
