@@ -3,7 +3,7 @@
  */
 
 export const JWT = {
-  ACCESS_TOKEN_EXPIRY: '15m',
+  ACCESS_TOKEN_EXPIRY: '2d',
   REFRESH_TOKEN_EXPIRY: '30d',
   REFRESH_TOKEN_EXPIRY_DAYS: 30,
 } as const;

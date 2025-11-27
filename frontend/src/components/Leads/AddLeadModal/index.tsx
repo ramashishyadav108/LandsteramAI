@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { leadService, CreateLeadData } from '../../../services/lead.service';
+import { createLeadSchema } from '../../../utils/validationSchemas';
 import './AddLeadModal.css';
 
 interface AddLeadModalProps {
@@ -27,9 +28,16 @@ const AddLeadModal: React.FC<AddLeadModalProps> = ({ onClose, onLeadAdded }) => 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [dealValueError, setDealValueError] = useState('');
+  const [emailError, setEmailError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+
+    // Clear email error when user types in email field
+    if (name === 'email') {
+      setEmailError('');
+    }
+
     setFormData(prev => ({
       ...prev,
       [name]: value,
@@ -72,9 +80,32 @@ const AddLeadModal: React.FC<AddLeadModalProps> = ({ onClose, onLeadAdded }) => 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setEmailError('');
+    setDealValueError('');
 
-    if (!formData.firstName.trim()) {
-      setError('Lead First Name is required');
+    // Validate form data with Zod
+    const validationResult = createLeadSchema.safeParse(formData);
+
+    if (!validationResult.success) {
+      // Handle validation errors
+      const errors = validationResult.error.errors;
+
+      // Set specific field errors
+      errors.forEach((err) => {
+        const fieldPath = err.path[0] as string;
+
+        if (fieldPath === 'email') {
+          setEmailError(err.message);
+        } else if (fieldPath === 'dealValue') {
+          setDealValueError(err.message);
+        } else if (fieldPath === 'firstName') {
+          setError(err.message);
+        } else {
+          // Generic error for other fields
+          setError(err.message);
+        }
+      });
+
       return;
     }
 
@@ -175,13 +206,15 @@ const AddLeadModal: React.FC<AddLeadModalProps> = ({ onClose, onLeadAdded }) => 
               <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input
-                  type="email"
+                  type="text"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   placeholder=""
+                  className={emailError ? 'input-error' : ''}
                 />
+                {emailError && <small className="field-error">{emailError}</small>}
               </div>
             </div>
 
