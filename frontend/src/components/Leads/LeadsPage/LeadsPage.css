@@ -460,23 +460,32 @@
 .lead-info {
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
-.lead-name {
-  font-weight: 500;
-  color: #111827;
+.lead-name-det {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #000000;
 }
 
-.dark-theme .lead-name {
+.dark-theme .lead-name-det {
   color: #f3f4f6;
 }
 
-.lead-company {
-  font-size: 12px;
-  color: #9ca3af;
+.lead-company-det {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 150%;
+  color: #AEAEAE;
 }
 
-.dark-theme .lead-company {
+.dark-theme .lead-company-det {
   color: #9ca3af;
 }
 

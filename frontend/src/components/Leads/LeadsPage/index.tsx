@@ -369,8 +369,8 @@ const LeadsPage: React.FC = () => {
                             {lead.firstName.charAt(0).toUpperCase()}
                           </div>
                           <div className="lead-info">
-                            <span className="lead-name">{getFullName(lead)}</span>
-                            <span className="lead-company">{lead.companyName || 'Company details'}</span>
+                            <span className="lead-name-det">{getFullName(lead)}</span>
+                            <span className="lead-company-det">{lead.companyName || 'Company details'}</span>
                           </div>
                         </div>
                       </td>
