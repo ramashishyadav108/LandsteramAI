@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
 
   // Keep deal-sourcing expanded if we're on any of its child routes
   React.useEffect(() => {
-    if (location.pathname.startsWith('/deal-sourcing/')) {
+    if (location.pathname.startsWith('/deal-sourcing/') || location.pathname.startsWith('/leads/')) {
       setExpandedMenus(prev => prev.includes('deal-sourcing') ? prev : [...prev, 'deal-sourcing']);
     }
   }, [location.pathname]);

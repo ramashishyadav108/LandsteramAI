@@ -245,3 +245,21 @@
 .dark-theme .cancel-btn:hover {
   background-color: #4b5563;
 }
+
+/* Input error styles */
+.input-error {
+  border-color: #dc2626 !important;
+}
+
+.input-error:focus {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+.field-error {
+  display: block;
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}

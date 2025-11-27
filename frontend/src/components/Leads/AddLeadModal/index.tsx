@@ -26,6 +26,7 @@ const AddLeadModal: React.FC<AddLeadModalProps> = ({ onClose, onLeadAdded }) => 
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [dealValueError, setDealValueError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -37,9 +38,34 @@ const AddLeadModal: React.FC<AddLeadModalProps> = ({ onClose, onLeadAdded }) => 
 
   const handleNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
+
+    // Clear error when field is empty
+    if (!value.trim()) {
+      setDealValueError('');
+      setFormData(prev => ({
+        ...prev,
+        [name]: undefined,
+      }));
+      return;
+    }
+
+    // Validate if it's a valid number
+    const numberValue = parseFloat(value);
+    if (isNaN(numberValue)) {
+      setDealValueError('Deal Value must be a valid number (integer or decimal)');
+      return;
+    }
+
+    if (numberValue < 0) {
+      setDealValueError('Deal Value must be a positive number');
+      return;
+    }
+
+    // Valid number
+    setDealValueError('');
     setFormData(prev => ({
       ...prev,
-      [name]: value ? parseFloat(value) : undefined,
+      [name]: numberValue,
     }));
   };
 
@@ -212,15 +238,15 @@ const AddLeadModal: React.FC<AddLeadModalProps> = ({ onClose, onLeadAdded }) => 
               <div className="form-group">
                 <label htmlFor="dealValue">Deal Value</label>
                 <input
-                  type="number"
+                  type="text"
                   id="dealValue"
                   name="dealValue"
                   value={formData.dealValue || ''}
                   onChange={handleNumberChange}
                   placeholder=""
-                  min="0"
-                  step="0.01"
+                  className={dealValueError ? 'input-error' : ''}
                 />
+                {dealValueError && <small className="field-error">{dealValueError}</small>}
               </div>
               <div className="form-group">
                 <label htmlFor="leadPriority">Lead Priority</label>
