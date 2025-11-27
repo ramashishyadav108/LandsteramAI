@@ -23,6 +23,17 @@ export interface Lead {
   dealValue?: number;
   notes?: string;
   assignedRM?: string;
+  assignedRMs?: string[];
+  assignedRMDetails?: {
+    id: string;
+    name: string;
+    email: string;
+  };
+  assignedRMsList?: Array<{
+    id: string;
+    name: string;
+    email: string;
+  }>;
   createdAt: string;
   updatedAt: string;
   createdById: string;
@@ -103,6 +114,18 @@ class LeadService {
 
   async getLeadStats(): Promise<ApiResponse<LeadStats>> {
     return api.get<LeadStats>('/api/leads/stats');
+  }
+
+  async assignRM(leadId: string, rmUserId: string): Promise<ApiResponse<Lead>> {
+    return api.put<Lead>(`/api/leads/${leadId}/assign-rm`, { assignedRM: rmUserId });
+  }
+
+  async addRM(leadId: string, rmUserId: string): Promise<ApiResponse<Lead>> {
+    return api.post<Lead>(`/api/leads/${leadId}/add-rm`, { rmUserId });
+  }
+
+  async removeRM(leadId: string, rmUserId: string): Promise<ApiResponse<Lead>> {
+    return api.delete<Lead>(`/api/leads/${leadId}/remove-rm/${rmUserId}`);
   }
 }
 

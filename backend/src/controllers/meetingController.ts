@@ -5,6 +5,7 @@ import {
   getUserMeetings,
   cancelMeeting,
   updateMeetingStatus,
+  updateMeetingNotes,
 } from '../services/meetingService.js';
 import { getKratosAIEventType } from '../services/calendlyService.js';
 import { AppError, NotFoundError } from '../middlewares/errorHandler.js';
@@ -242,6 +243,54 @@ export const updateMeetingStatusById = async (
     logger.info('Meeting status updated successfully', { meetingId, status });
   } catch (error) {
     logger.error('Failed to update meeting status', error);
+    next(error);
+  }
+};
+
+/**
+ * Update meeting notes
+ */
+export const updateMeetingNotesById = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> => {
+  try {
+    const userId = (req.user as JWTPayload)?.userId;
+    const { meetingId } = req.params;
+    const { notes } = req.body;
+
+    if (!userId) {
+      throw new AppError('User not authenticated', HTTP_STATUS.UNAUTHORIZED);
+    }
+
+    if (notes === undefined) {
+      throw new AppError('Notes field is required', HTTP_STATUS.BAD_REQUEST);
+    }
+
+    // Check if user is part of the meeting
+    const meeting = await getMeetingById(meetingId);
+
+    if (!meeting) {
+      throw new NotFoundError('Meeting not found');
+    }
+
+    // Check if user is the lender (borrower is just an email, not a user in the system)
+    if (meeting.lenderId !== userId) {
+      throw new AppError(
+        'You do not have access to update this meeting',
+        HTTP_STATUS.FORBIDDEN
+      );
+    }
+
+    logger.info('Updating meeting notes', { meetingId });
+
+    const updatedMeeting = await updateMeetingNotes(meetingId, notes);
+
+    sendSuccess(res, { meeting: updatedMeeting }, 'Meeting notes updated successfully');
+    logger.info('Meeting notes updated successfully', { meetingId });
+  } catch (error) {
+    logger.error('Failed to update meeting notes', error);
     next(error);
   }
 };

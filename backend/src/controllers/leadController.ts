@@ -14,6 +14,8 @@ export const createLead = async (req: Request, res: Response, next: NextFunction
     const leadData = {
       ...req.body,
       createdById: userId,
+      // Set current user as default RM if no assignedRM is provided
+      assignedRM: req.body.assignedRM || JSON.stringify([userId]),
     };
 
     const lead = await leadService.createLead(leadData);
@@ -155,6 +157,98 @@ export const getLeadStats = async (req: Request, res: Response, next: NextFuncti
     const userId = req.user?.userId;
     const stats = await leadService.getLeadStats(userId);
     sendSuccess(res, stats);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const assignRM = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const userId = req.user?.userId;
+    if (!userId) {
+      throw new NotFoundError('User not found');
+    }
+
+    const { id } = req.params;
+    const { assignedRM } = req.body;
+
+    if (!assignedRM) {
+      throw new NotFoundError('Assigned RM user ID is required');
+    }
+
+    const existingLead = await leadService.getLeadById(id);
+    if (!existingLead) {
+      throw new NotFoundError('Lead not found');
+    }
+
+    // Ensure user can only update their own leads
+    if (existingLead.createdById !== userId) {
+      throw new NotFoundError('Lead not found');
+    }
+
+    const lead = await leadService.assignRM(id, assignedRM);
+    sendSuccess(res, lead, 'RM assigned successfully');
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const addRM = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const userId = req.user?.userId;
+    if (!userId) {
+      throw new NotFoundError('User not found');
+    }
+
+    const { id } = req.params;
+    const { rmUserId } = req.body;
+
+    if (!rmUserId) {
+      throw new NotFoundError('RM user ID is required');
+    }
+
+    const existingLead = await leadService.getLeadById(id);
+    if (!existingLead) {
+      throw new NotFoundError('Lead not found');
+    }
+
+    // Ensure user can only update their own leads
+    if (existingLead.createdById !== userId) {
+      throw new NotFoundError('Lead not found');
+    }
+
+    const lead = await leadService.addRM(id, rmUserId);
+    sendSuccess(res, lead, 'RM added successfully');
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const removeRM = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const userId = req.user?.userId;
+    if (!userId) {
+      throw new NotFoundError('User not found');
+    }
+
+    const { id, rmUserId } = req.params;
+
+    if (!rmUserId) {
+      throw new NotFoundError('RM user ID is required');
+    }
+
+    const existingLead = await leadService.getLeadById(id);
+    if (!existingLead) {
+      throw new NotFoundError('Lead not found');
+    }
+
+    // Ensure user can only update their own leads
+    if (existingLead.createdById !== userId) {
+      throw new NotFoundError('Lead not found');
+    }
+
+    const lead = await leadService.removeRM(id, rmUserId);
+    sendSuccess(res, lead, 'RM removed successfully');
   } catch (error) {
     next(error);
   }

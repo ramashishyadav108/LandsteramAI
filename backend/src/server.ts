@@ -38,10 +38,12 @@ logger.info('Token cleanup scheduled', {
 
 // Start server
 const server = app.listen(env.PORT, () => {
+  console.log('\n==============================================');
   logger.info(`Server running in ${env.NODE_ENV} mode`, {
     port: env.PORT,
     health: `http://localhost:${env.PORT}/health`
   });
+  console.log('==============================================\n');
 });
 
 // Graceful shutdown

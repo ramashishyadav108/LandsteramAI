@@ -53,7 +53,8 @@ class Logger {
   }
 
   info(message: string, data?: unknown): void {
-    console.log(this.formatMessage(LogLevel.INFO, message, data));
+    const formattedMessage = this.formatMessage(LogLevel.INFO, message, data);
+    console.log(formattedMessage);
   }
 
   warn(message: string, data?: unknown): void {

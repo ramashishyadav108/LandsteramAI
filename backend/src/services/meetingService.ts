@@ -394,3 +394,42 @@ export async function updateMeetingStatus(
     throw error;
   }
 }
+
+/**
+ * Update meeting notes
+ */
+export async function updateMeetingNotes(
+  meetingId: string,
+  notes: string
+): Promise<MeetingWithUsers> {
+  try {
+    const updatedMeeting = await prisma.meeting.update({
+      where: { id: meetingId },
+      data: { notes },
+      include: {
+        lender: {
+          select: {
+            id: true,
+            name: true,
+            email: true,
+          },
+        },
+      },
+    });
+
+    logger.info('Meeting notes updated', { meetingId });
+
+    // Return meeting with borrower info constructed from borrowerId (which is an email)
+    return {
+      ...updatedMeeting,
+      borrower: {
+        id: updatedMeeting.borrowerId,
+        name: null,
+        email: updatedMeeting.borrowerId,
+      },
+    };
+  } catch (error) {
+    logger.error('Failed to update meeting notes', error);
+    throw error;
+  }
+}

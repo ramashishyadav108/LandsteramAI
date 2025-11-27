@@ -10,6 +10,7 @@ import {
   resetPassword,
   getProfile,
   deleteAccount,
+  getAllUsers,
 } from '../controllers/authController.js';
 import { authenticateToken } from '../middlewares/authMiddleware.js';
 import { validate, signupSchema, loginSchema, emailSchema, resetPasswordSchema } from '../utils/validate.js';
@@ -25,6 +26,7 @@ router.get('/verify-email', verifyEmail);
 router.post('/request-password-reset', validate(emailSchema), requestPasswordReset);
 router.post('/reset-password', validate(resetPasswordSchema), resetPassword);
 router.get('/profile', authenticateToken, getProfile as RequestHandler);
+router.get('/users', authenticateToken, getAllUsers as RequestHandler);
 router.delete('/delete-account', authenticateToken, deleteAccount as RequestHandler);
 
 export default router;

@@ -12,6 +12,8 @@ export interface Meeting {
   platform: string | null;
   status: 'SCHEDULED' | 'COMPLETED' | 'CANCELED' | 'NO_SHOW';
   notes: string | null;
+  rmEmail: string | null;
+  additionalEmails: string[];
   createdAt: string;
   updatedAt: string;
   lender: {
@@ -72,6 +74,13 @@ class MeetingService {
     status: 'SCHEDULED' | 'COMPLETED' | 'CANCELED' | 'NO_SHOW'
   ): Promise<ApiResponse<{ meeting: Meeting }>> {
     return api.patch(`/api/meetings/${meetingId}/status`, { status });
+  }
+
+  /**
+   * Update meeting notes
+   */
+  async updateMeetingNotes(meetingId: string, notes: string): Promise<ApiResponse<{ meeting: Meeting }>> {
+    return api.patch(`/api/meetings/${meetingId}/notes`, { notes });
   }
 
   /**

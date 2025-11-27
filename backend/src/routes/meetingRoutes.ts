@@ -5,6 +5,7 @@ import {
   getMeeting,
   cancelMeetingById,
   updateMeetingStatusById,
+  updateMeetingNotesById,
   getEventTypes,
 } from '../controllers/meetingController.js';
 import { authenticateToken } from '../middlewares/authMiddleware.js';
@@ -31,5 +32,8 @@ router.post('/:meetingId/cancel', cancelMeetingById);
 
 // Update meeting status
 router.patch('/:meetingId/status', updateMeetingStatusById);
+
+// Update meeting notes
+router.patch('/:meetingId/notes', updateMeetingNotesById);
 
 export default router;

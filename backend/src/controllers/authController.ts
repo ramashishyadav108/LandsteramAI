@@ -338,3 +338,37 @@ export const deleteAccount = async (
     next(error);
   }
 };
+
+export const getAllUsers = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> => {
+  try {
+    const userId = (req.user as JWTPayload)?.userId;
+
+    if (!userId) {
+      throw new AuthenticationError('User not authenticated');
+    }
+
+    const users = await prisma.user.findMany({
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        isVerified: true,
+        createdAt: true,
+        updatedAt: true,
+      },
+      orderBy: {
+        name: 'asc',
+      },
+    });
+
+    sendSuccess(res, users);
+    logger.info('Users list retrieved', { count: users.length });
+  } catch (error) {
+    logger.error('Failed to retrieve users', error);
+    next(error);
+  }
+};

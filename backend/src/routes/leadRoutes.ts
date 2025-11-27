@@ -45,6 +45,14 @@ const updateLeadSchema = z.object({
   assignedRM: z.string().optional(),
 });
 
+const assignRMSchema = z.object({
+  assignedRM: z.string().min(1, 'Assigned RM user ID is required'),
+});
+
+const addRMSchema = z.object({
+  rmUserId: z.string().min(1, 'RM user ID is required'),
+});
+
 // All routes require authentication
 router.use(authenticateToken);
 
@@ -55,6 +63,9 @@ router.get('/my-leads', leadController.getMyLeads);
 router.get('/stats', leadController.getLeadStats);
 router.get('/:id', leadController.getLead);
 router.put('/:id', validate(updateLeadSchema), leadController.updateLead);
+router.put('/:id/assign-rm', validate(assignRMSchema), leadController.assignRM);
+router.post('/:id/add-rm', validate(addRMSchema), leadController.addRM);
+router.delete('/:id/remove-rm/:rmUserId', leadController.removeRM);
 router.delete('/:id', leadController.deleteLead);
 
 export default router;

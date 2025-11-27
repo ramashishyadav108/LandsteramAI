@@ -378,8 +378,18 @@ const LeadsPage: React.FC = () => {
                       <td>{formatDate(lead.createdAt)}</td>
                       <td>
                         <div className="assigned-rm-cell">
-                          <div className="rm-avatar"></div>
-                          <span>{lead.assignedRM || 'Name'}</span>
+                          <div className="rm-avatar">
+                            {lead.assignedRMsList?.[0]?.name?.charAt(0).toUpperCase() || 'R'}
+                          </div>
+                          <span>
+                            {lead.assignedRMsList && lead.assignedRMsList.length > 0
+                              ? `${lead.assignedRMsList[0].name}${
+                                  lead.assignedRMsList.length > 1
+                                    ? ` + ${lead.assignedRMsList.length - 1}`
+                                    : ''
+                                }`
+                              : 'No RM assigned'}
+                          </span>
                         </div>
                       </td>
                       <td>

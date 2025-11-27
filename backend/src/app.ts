@@ -30,7 +30,9 @@ app.use(cookieParser());
 app.use(ensureDbConnection);
 
 // Request logging middleware
-app.use((req: Request, _res: Response, next: NextFunction) => {
+app.use((req: Request, res: Response, next: NextFunction) => {
+  const startTime = Date.now();
+  
   logger.info('Incoming request', {
     method: req.method,
     url: req.url,
@@ -38,10 +40,19 @@ app.use((req: Request, _res: Response, next: NextFunction) => {
     origin: req.get('origin'),
     userAgent: req.get('user-agent')
   });
+
+  // Log response after it's sent
+  res.on('finish', () => {
+    const duration = Date.now() - startTime;
+    logger.http(req.method, req.path, res.statusCode, duration);
+  });
+
   next();
 });
 
 app.get('/health', (_req: Request, res: Response) => {
+  console.log('Health check endpoint hit');
+  logger.info('Health check requested');
   res.status(200).json({ 
     success: true, 
     message: 'Server is running' 
