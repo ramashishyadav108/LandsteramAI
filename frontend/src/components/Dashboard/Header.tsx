@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import { authService } from '../../services/auth.service';
 import caloriesIcon from '../../assets/calories.png';
@@ -23,6 +24,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const userMenuRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const userData = authService.getUser();
@@ -167,6 +169,13 @@ const Header: React.FC<HeaderProps> = ({}) => {
           </div>
           {showUserDropdown && (
             <div className="user-dropdown">
+              <button className="user-dropdown-item" onClick={() => navigate('/profile')}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                <span>Profile</span>
+              </button>
               <button className="user-dropdown-item" onClick={handleLogout}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />

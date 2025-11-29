@@ -59,6 +59,7 @@ export const createLead = async (data: CreateLeadData) => {
           id: true,
           name: true,
           email: true,
+          picture: true,
         },
       },
     },
@@ -74,6 +75,7 @@ export const getLeadById = async (id: string) => {
           id: true,
           name: true,
           email: true,
+          picture: true,
         },
       },
     },
@@ -102,6 +104,7 @@ export const getLeadById = async (id: string) => {
             id: true,
             name: true,
             email: true,
+            picture: true,
           },
         });
       }
@@ -114,6 +117,7 @@ export const getLeadById = async (id: string) => {
           id: true,
           name: true,
           email: true,
+          picture: true,
         },
       });
       if (rmUser) {
@@ -180,6 +184,7 @@ export const getAllLeads = async (filters?: LeadFilters) => {
           id: true,
           name: true,
           email: true,
+          picture: true,
         },
       },
     },
@@ -209,6 +214,7 @@ export const getAllLeads = async (filters?: LeadFilters) => {
                 id: true,
                 name: true,
                 email: true,
+                picture: true,
               },
             });
           }
@@ -221,6 +227,7 @@ export const getAllLeads = async (filters?: LeadFilters) => {
               id: true,
               name: true,
               email: true,
+              picture: true,
             },
           });
           if (rmUser) {
@@ -250,6 +257,7 @@ export const updateLead = async (id: string, data: UpdateLeadData) => {
           id: true,
           name: true,
           email: true,
+          picture: true,
         },
       },
     },
@@ -271,6 +279,7 @@ export const getLeadsByUser = async (userId: string) => {
           id: true,
           name: true,
           email: true,
+          picture: true,
         },
       },
     },
@@ -309,6 +318,7 @@ export const assignRM = async (id: string, assignedRM: string) => {
       id: true,
       name: true,
       email: true,
+      picture: true,
     },
   });
 
@@ -322,6 +332,7 @@ export const assignRM = async (id: string, assignedRM: string) => {
           id: true,
           name: true,
           email: true,
+          picture: true,
         },
       },
     },

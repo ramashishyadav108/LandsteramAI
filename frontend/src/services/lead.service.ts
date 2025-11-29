@@ -28,11 +28,13 @@ export interface Lead {
     id: string;
     name: string;
     email: string;
+    picture?: string;
   };
   assignedRMsList?: Array<{
     id: string;
     name: string;
     email: string;
+    picture?: string;
   }>;
   createdAt: string;
   updatedAt: string;

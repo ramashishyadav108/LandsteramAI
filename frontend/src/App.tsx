@@ -10,6 +10,7 @@ import { Dashboard } from './components/Dashboard';
 import { LeadsPage, LeadDetailsPage, AddLeadPage } from './components/Leads';
 import { MeetingsPage } from './components/Meetings';
 import { ApplicationManagementPage } from './components/ApplicationManagement';
+import ProfilePage from './pages/ProfilePage';
 
 const App: React.FC = () => {
   return (
@@ -34,6 +35,8 @@ const App: React.FC = () => {
           <Route path="/meetings" element={<MeetingsPage />} />
           {/* Application Management */}
           <Route path="/application-management" element={<ApplicationManagementPage />} />
+          {/* Profile */}
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </Router>
     </ThemeProvider>

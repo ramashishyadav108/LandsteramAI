@@ -77,10 +77,13 @@ class ApiService {
 
     console.log('API Request:', { url, method: options.method || 'GET' });
 
+    // Check if body is FormData - if so, don't set Content-Type (let browser set it with boundary)
+    const isFormData = options.body instanceof FormData;
+
     const config: RequestInit = {
       ...options,
       headers: {
-        'Content-Type': 'application/json',
+        ...(isFormData ? {} : { 'Content-Type': 'application/json' }),
         ...this.getAuthHeader(),
         ...options.headers,
       },
@@ -149,7 +152,7 @@ class ApiService {
     return this.request<T>(endpoint, {
       ...options,
       method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
+      body: data instanceof FormData ? data : (data ? JSON.stringify(data) : undefined),
     });
   }
 

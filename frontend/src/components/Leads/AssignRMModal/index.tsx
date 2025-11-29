@@ -162,7 +162,11 @@ const AssignRMModal: React.FC<AssignRMModalProps> = ({ onClose, onAssign, onRemo
                       className={`user-item ${isAssigned ? 'assigned' : ''}`}
                     >
                       <div className="user-avatar">
-                        {user.name.charAt(0).toUpperCase()}
+                        {user.picture ? (
+                          <img src={user.picture} alt={user.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                        ) : (
+                          user.name.charAt(0).toUpperCase()
+                        )}
                       </div>
                       <div className="user-info">
                         <div className="user-name">

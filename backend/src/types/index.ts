@@ -35,6 +35,14 @@ export interface UserResponse {
   name: string | null;
   isVerified: boolean;
   googleId?: string | null;
+  picture?: string | null;
+  phone?: string | null;
+  address?: string | null;
+  dateOfBirth?: string | null;
+  department?: string | null;
+  position?: string | null;
+  employeeId?: string | null;
+  directManager?: string | null;
   createdAt: Date;
   updatedAt: Date;
 }

@@ -358,7 +358,20 @@ const LeadDetailsPage: React.FC = () => {
                         {lead.assignedRMsList.map((rm) => (
                           <div key={rm.id} className="rm-item-card-simple">
                             <div className="rm-avatar-simple">
-                              {rm.name?.charAt(0).toUpperCase() || rm.email.charAt(0).toUpperCase()}
+                              {rm.picture ? (
+                                <img
+                                  src={rm.picture}
+                                  alt={rm.name || rm.email}
+                                  style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                    borderRadius: '50%',
+                                  }}
+                                />
+                              ) : (
+                                rm.name?.charAt(0).toUpperCase() || rm.email.charAt(0).toUpperCase()
+                              )}
                             </div>
                             <div className="rm-item-details-simple">
                               <span className="rm-item-name-simple">{rm.name || rm.email}</span>
@@ -671,12 +684,14 @@ const LeadDetailsPage: React.FC = () => {
                               {
                                 name: meeting.lender.name || meeting.lender.email.split('@')[0],
                                 designation: 'Lender',
-                                email: meeting.lender.email
+                                email: meeting.lender.email,
+                                picture: meeting.lender.picture
                               },
                               {
                                 name: meeting.borrower.name || meeting.borrower.email.split('@')[0],
                                 designation: 'Borrower',
-                                email: meeting.borrower.email
+                                email: meeting.borrower.email,
+                                picture: meeting.borrower.picture
                               },
                             ];
 
@@ -685,7 +700,8 @@ const LeadDetailsPage: React.FC = () => {
                               attendees.push({
                                 name: meeting.rmEmail.split('@')[0],
                                 designation: 'RM',
-                                email: meeting.rmEmail
+                                email: meeting.rmEmail,
+                                picture: undefined
                               });
                             }
 
@@ -695,7 +711,8 @@ const LeadDetailsPage: React.FC = () => {
                                 attendees.push({
                                   name: email.split('@')[0],
                                   designation: 'Guest',
-                                  email: email
+                                  email: email,
+                                  picture: undefined
                                 });
                               });
                             }
@@ -727,7 +744,20 @@ const LeadDetailsPage: React.FC = () => {
                                     {attendees.map((member, i) => (
                                       <div key={i} className="member-item">
                                         <div className="member-avatar">
-                                          {member.name.charAt(0).toUpperCase()}
+                                          {member.picture ? (
+                                            <img
+                                              src={member.picture}
+                                              alt={member.name}
+                                              style={{
+                                                width: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover',
+                                                borderRadius: '50%',
+                                              }}
+                                            />
+                                          ) : (
+                                            member.name.charAt(0).toUpperCase()
+                                          )}
                                         </div>
                                         <div className="member-info">
                                           <div className="member-name">{member.name}</div>

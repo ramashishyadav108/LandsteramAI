@@ -46,6 +46,26 @@ class AuthService {
     return api.get('/api/auth/profile');
   }
 
+  async updateProfile(data: {
+    name: string;
+    phone?: string;
+    address?: string;
+    dateOfBirth?: string;
+    department?: string;
+    position?: string;
+    employeeId?: string;
+    directManager?: string;
+  }): Promise<ApiResponse<{ user: any }>> {
+    return api.put('/api/auth/profile', data);
+  }
+
+  async uploadProfilePicture(file: File): Promise<ApiResponse<{ user: any }>> {
+    const formData = new FormData();
+    formData.append('picture', file);
+    // Don't set Content-Type header - let the browser set it with the correct boundary
+    return api.post('/api/auth/profile/upload-picture', formData);
+  }
+
   async requestPasswordReset(email: string): Promise<ApiResponse> {
     return api.post('/api/auth/request-password-reset', { email });
   }

@@ -20,11 +20,13 @@ export interface Meeting {
     id: string;
     name: string | null;
     email: string;
+    picture?: string | null;
   };
   borrower: {
     id: string;
     name: string | null;
     email: string;
+    picture?: string | null;
   };
 }
 

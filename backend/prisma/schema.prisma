@@ -19,6 +19,14 @@ model User {
   verificationToken String?
   resetToken        String?
   resetTokenExpiry  DateTime?
+  picture           String?
+  phone             String?
+  address           String?
+  dateOfBirth       String?
+  department        String?
+  position          String?
+  employeeId        String?
+  directManager     String?
   createdAt         DateTime       @default(now())
   updatedAt         DateTime       @updatedAt
   leads             Lead[]

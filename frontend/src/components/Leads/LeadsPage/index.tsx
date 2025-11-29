@@ -379,7 +379,11 @@ const LeadsPage: React.FC = () => {
                       <td>
                         <div className="assigned-rm-cell">
                           <div className="rm-avatar">
-                            {lead.assignedRMsList?.[0]?.name?.charAt(0).toUpperCase() || 'R'}
+                            {lead.assignedRMsList?.[0]?.picture ? (
+                              <img src={lead.assignedRMsList[0].picture} alt={lead.assignedRMsList[0].name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                            ) : (
+                              lead.assignedRMsList?.[0]?.name?.charAt(0).toUpperCase() || 'R'
+                            )}
                           </div>
                           <span>
                             {lead.assignedRMsList && lead.assignedRMsList.length > 0

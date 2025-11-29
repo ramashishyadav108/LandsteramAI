@@ -1,9 +1,10 @@
 import crypto from 'crypto';
 import { Request, Response, NextFunction } from 'express';
 import prisma from '../config/db.js';
-import { 
-  createUser, 
-  findUserByEmail, 
+import cloudinary from '../config/cloudinary.config.js';
+import {
+  createUser,
+  findUserByEmail,
   findUserById,
   verifyPassword,
   updateUserVerification,
@@ -12,9 +13,9 @@ import {
   findUserByResetToken,
   resetUserPassword
 } from '../services/userService.js';
-import { 
-  generateTokens, 
-  rotateRefreshToken, 
+import {
+  generateTokens,
+  rotateRefreshToken,
   revokeRefreshToken,
   revokeAllUserTokens,
   revokeOtherUserTokens
@@ -357,6 +358,7 @@ export const getAllUsers = async (
         name: true,
         email: true,
         isVerified: true,
+        picture: true,
         createdAt: true,
         updatedAt: true,
       },
@@ -369,6 +371,152 @@ export const getAllUsers = async (
     logger.info('Users list retrieved', { count: users.length });
   } catch (error) {
     logger.error('Failed to retrieve users', error);
+    next(error);
+  }
+};
+
+export const updateProfile = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> => {
+  try {
+    const userId = (req.user as JWTPayload)?.userId;
+
+    if (!userId) {
+      logger.warn('Update profile attempt without authentication');
+      throw new AuthenticationError('User not authenticated');
+    }
+
+    const {
+      name,
+      phone,
+      address,
+      dateOfBirth,
+      department,
+      position,
+      employeeId,
+      directManager
+    } = req.body;
+
+    logger.info('Updating user profile', { userId });
+
+    const user = await findUserById(userId);
+
+    if (!user) {
+      logger.warn('User not found', { userId });
+      throw new NotFoundError('User not found');
+    }
+
+    // Update user in database
+    const updatedUser = await prisma.user.update({
+      where: { id: userId },
+      data: {
+        name: name || user.name,
+        phone: phone !== undefined ? phone : user.phone,
+        address: address !== undefined ? address : user.address,
+        dateOfBirth: dateOfBirth !== undefined ? dateOfBirth : user.dateOfBirth,
+        department: department !== undefined ? department : user.department,
+        position: position !== undefined ? position : user.position,
+        employeeId: employeeId !== undefined ? employeeId : user.employeeId,
+        directManager: directManager !== undefined ? directManager : user.directManager,
+      },
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        isVerified: true,
+        picture: true,
+        phone: true,
+        address: true,
+        dateOfBirth: true,
+        department: true,
+        position: true,
+        employeeId: true,
+        directManager: true,
+        createdAt: true,
+        updatedAt: true,
+      },
+    });
+
+    sendSuccess(res, { user: updatedUser }, 'Profile updated successfully');
+    logger.info('User profile updated successfully', { userId });
+  } catch (error) {
+    logger.error('Update profile failed', error);
+    next(error);
+  }
+};
+
+export const uploadProfilePicture = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> => {
+  try {
+    const userId = (req.user as JWTPayload)?.userId;
+
+    if (!userId) {
+      logger.warn('Upload profile picture attempt without authentication');
+      throw new AuthenticationError('User not authenticated');
+    }
+
+    if (!req.file) {
+      logger.warn('Upload profile picture attempt without file');
+      throw new AppError('No file uploaded', HTTP_STATUS.BAD_REQUEST);
+    }
+
+    logger.info('Uploading profile picture to Cloudinary', { userId });
+
+    // Upload to Cloudinary
+    const result = await new Promise((resolve, reject) => {
+      const uploadStream = cloudinary.uploader.upload_stream(
+        {
+          folder: 'profile_pictures',
+          public_id: `user_${userId}`,
+          overwrite: true,
+          transformation: [
+            { width: 400, height: 400, crop: 'fill', gravity: 'face' }
+          ]
+        },
+        (error, result) => {
+          if (error) reject(error);
+          else resolve(result);
+        }
+      );
+      uploadStream.end(req.file!.buffer);
+    });
+
+    const cloudinaryResult = result as any;
+    const pictureUrl = cloudinaryResult.secure_url;
+
+    logger.info('Profile picture uploaded to Cloudinary', { userId, url: pictureUrl });
+
+    // Update user's picture in database
+    const updatedUser = await prisma.user.update({
+      where: { id: userId },
+      data: { picture: pictureUrl },
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        isVerified: true,
+        picture: true,
+        phone: true,
+        address: true,
+        dateOfBirth: true,
+        department: true,
+        position: true,
+        employeeId: true,
+        directManager: true,
+        createdAt: true,
+        updatedAt: true,
+      },
+    });
+
+    sendSuccess(res, { user: updatedUser }, 'Profile picture updated successfully');
+    logger.info('Profile picture updated successfully', { userId });
+  } catch (error) {
+    logger.error('Upload profile picture failed', error);
     next(error);
   }
 };
