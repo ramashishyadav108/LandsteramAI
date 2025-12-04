@@ -7,7 +7,7 @@ import {
   deleteInputData,
   getScenarios,
   calculateByModule
-} from '../controllers/scorecardController';
+} from '../controllers/scorecardController.js';
 
 const router: Router = express.Router();
 

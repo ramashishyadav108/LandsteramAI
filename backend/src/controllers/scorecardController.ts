@@ -6,7 +6,7 @@ import {
   bulkUpdateInputFlatFile,
   clearInputFlatFile,
   getAllScenarios
-} from '../lib/engine';
+} from '../lib/engine.js';
 
 /**
  * Calculate scorecard for an application
