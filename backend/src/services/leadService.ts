@@ -412,11 +412,216 @@ export const removeRM = async (id: string, rmUserId: string) => {
   // Update lead with new RMs array (or null if empty)
   await prisma.lead.update({
     where: { id },
-    data: { 
-      assignedRM: assignedRMs.length > 0 ? JSON.stringify(assignedRMs) : null 
+    data: {
+      assignedRM: assignedRMs.length > 0 ? JSON.stringify(assignedRMs) : null
     },
   });
 
   // Return updated lead with details
   return getLeadById(id);
+};
+
+export const getFunnelStats = async (userId?: string) => {
+  const where = userId ? { createdById: userId } : {};
+
+  // Get all leads for the user
+  const allLeads = await prisma.lead.findMany({
+    where,
+  });
+
+  // Calculate funnel statistics
+  const totalLeadsCreated = allLeads.length;
+
+  // Knockout Passed - leads that are NOT in KNOCKOUT_FAILED or NEW status
+  const knockoutPassed = allLeads.filter(
+    lead => lead.status !== 'KNOCKOUT_FAILED' && lead.status !== 'NEW'
+  ).length;
+
+  // Meetings Scheduled - leads with MEETING_SCHEDULED status
+  const meetingsScheduled = allLeads.filter(
+    lead => lead.status === 'MEETING_SCHEDULED'
+  ).length;
+
+  // Application Initiated - leads that have progressed beyond meetings
+  const applicationInitiated = allLeads.filter(
+    lead => ['QUALIFIED', 'PROPOSAL_SENT', 'NEGOTIATION', 'WON'].includes(lead.status)
+  ).length;
+
+  // Application Passed - leads that have WON status
+  const applicationPassed = allLeads.filter(
+    lead => lead.status === 'WON'
+  ).length;
+
+  // Calculate conversion rates
+  const conversionToMeetings = totalLeadsCreated > 0
+    ? Math.round((meetingsScheduled / totalLeadsCreated) * 100)
+    : 0;
+
+  const conversionToApplications = totalLeadsCreated > 0
+    ? Math.round((applicationInitiated / totalLeadsCreated) * 100)
+    : 0;
+
+  // Calculate counts for action links
+  const leadsToContact = allLeads.filter(
+    lead => lead.status === 'NEW'
+  ).length;
+
+  const leadsToKnockout = allLeads.filter(
+    lead => lead.status === 'QUALIFIED'
+  ).length;
+
+  return {
+    funnel: {
+      leadsCreated: totalLeadsCreated,
+      knockoutPassed,
+      meetingsScheduled,
+      applicationInitiated,
+      applicationPassed,
+    },
+    conversions: {
+      toMeetings: conversionToMeetings,
+      toApplications: conversionToApplications,
+    },
+    actionItems: {
+      leadsToContact,
+      leadsToKnockout,
+    },
+  };
+};
+
+export const getApplicationOverviewStats = async (userId?: string) => {
+  const where = userId ? { createdById: userId } : {};
+
+  // Get current date for time-based calculations
+  const now = new Date();
+  const lastMonth = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
+  const thisWeekStart = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7);
+
+  // Get all leads
+  const allLeads = await prisma.lead.findMany({
+    where,
+    include: {
+      createdBy: {
+        select: {
+          id: true,
+          name: true,
+          email: true,
+          picture: true,
+        },
+      },
+    },
+    orderBy: {
+      updatedAt: 'desc',
+    },
+  });
+
+  // Get last month's leads for comparison
+  const lastMonthLeads = await prisma.lead.count({
+    where: {
+      ...where,
+      createdAt: {
+        gte: lastMonth,
+      },
+    },
+  });
+
+  // Calculate statistics
+  const totalBorrowers = allLeads.length;
+
+  // Under Assessment - leads with statuses that indicate active review
+  const underAssessment = allLeads.filter(
+    lead => ['QUALIFIED', 'PROPOSAL_SENT', 'NEGOTIATION'].includes(lead.status)
+  ).length;
+
+  // New this week
+  const newThisWeek = allLeads.filter(
+    lead => new Date(lead.createdAt) >= thisWeekStart
+  ).length;
+
+  // High-Risk Borrowers - leads that have KNOCKOUT_FAILED or LOST status
+  const highRiskBorrowers = allLeads.filter(
+    lead => ['KNOCKOUT_FAILED', 'LOST'].includes(lead.status)
+  ).length;
+
+  // Pending Approvals - leads with status PROPOSAL_SENT or NEGOTIATION
+  const pendingApprovals = allLeads.filter(
+    lead => ['PROPOSAL_SENT', 'NEGOTIATION'].includes(lead.status)
+  ).length;
+
+  // Calculate growth percentage
+  const growthPercentage = lastMonthLeads > 0
+    ? Math.round(((totalBorrowers - lastMonthLeads) / lastMonthLeads) * 100)
+    : 0;
+
+  // Recently approved applications (WON status in last 48 hours)
+  const twoDaysAgo = new Date(now.getTime() - 48 * 60 * 60 * 1000);
+  const recentlyApproved = allLeads.filter(
+    lead => lead.status === 'WON' && new Date(lead.updatedAt) >= twoDaysAgo
+  ).length;
+
+  // Missing documents - leads with NEW status
+  const missingDocs = allLeads.filter(
+    lead => lead.status === 'NEW'
+  ).length;
+
+  // Not scheduled for committee - leads with MEETING_SCHEDULED status
+  const notScheduled = allLeads.filter(
+    lead => lead.status === 'MEETING_SCHEDULED'
+  ).length;
+
+  // Inactive applications - leads not updated in last 30 days
+  const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+  const inactiveApplications = allLeads.filter(
+    lead => new Date(lead.updatedAt) < thirtyDaysAgo && lead.status !== 'WON' && lead.status !== 'LOST'
+  ).length;
+
+  // Recent applications for "Pick Up Where You Left"
+  const recentApplications = allLeads
+    .filter(lead => lead.status !== 'WON' && lead.status !== 'LOST')
+    .slice(0, 3)
+    .map(lead => ({
+      id: lead.id,
+      companyName: lead.companyName || `${lead.firstName} ${lead.lastName || ''}`.trim(),
+      description: lead.notes || 'No description available',
+      status: lead.status,
+      lastUpdated: lead.updatedAt,
+    }));
+
+  // Pipeline health - distribution of statuses
+  const statusCounts = {
+    notStarted: allLeads.filter(l => l.status === 'NEW').length,
+    onTrack: allLeads.filter(l => ['MEETING_SCHEDULED', 'QUALIFIED'].includes(l.status)).length,
+    atRisk: allLeads.filter(l => l.status === 'KNOCKOUT_FAILED').length,
+    delayed: allLeads.filter(l => new Date(l.updatedAt) < thirtyDaysAgo && l.status !== 'WON' && l.status !== 'LOST').length,
+    completed: allLeads.filter(l => l.status === 'WON').length,
+  };
+
+  const total = allLeads.length || 1; // Avoid division by zero
+  const pipelineHealth = {
+    notStarted: Math.round((statusCounts.notStarted / total) * 100),
+    onTrack: Math.round((statusCounts.onTrack / total) * 100),
+    atRisk: Math.round((statusCounts.atRisk / total) * 100),
+    delayed: Math.round((statusCounts.delayed / total) * 100),
+    completed: Math.round((statusCounts.completed / total) * 100),
+  };
+
+  return {
+    statistics: {
+      totalBorrowers,
+      growthPercentage,
+      underAssessment,
+      newThisWeek,
+      highRiskBorrowers,
+      highRiskChange: -3, // This could be calculated based on previous period
+      pendingApprovals,
+    },
+    actionItems: {
+      recentlyApproved,
+      missingDocs,
+      notScheduled,
+      inactiveApplications,
+    },
+    recentApplications,
+    pipelineHealth,
+  };
 };

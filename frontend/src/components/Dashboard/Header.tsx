@@ -5,9 +5,10 @@ import { authService } from '../../services/auth.service';
 import caloriesIcon from '../../assets/calories.png';
 import './Header.css';
 
-interface HeaderProps {
+export interface HeaderProps {
   collapsed: boolean;
   onToggle: () => void;
+  pageTitle?: string;
 }
 
 interface User {
@@ -18,7 +19,7 @@ interface User {
   isEmailVerified: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({}) => {
+const Header: React.FC<HeaderProps> = ({ pageTitle }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [user, setUser] = useState<User | null>(null);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
@@ -84,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
   return (
     <header className="dashboard-header">
       <div className="header-left">
-        <h1 className="header-title">Lead Pipeline</h1>
+        <h1 className="header-title">{pageTitle || 'Lead Pipeline'}</h1>
       </div>
 
       <div className="header-center">

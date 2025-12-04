@@ -81,6 +81,24 @@ export interface LeadStats {
   byStatus: Record<string, number>;
 }
 
+export interface FunnelStats {
+  funnel: {
+    leadsCreated: number;
+    knockoutPassed: number;
+    meetingsScheduled: number;
+    applicationInitiated: number;
+    applicationPassed: number;
+  };
+  conversions: {
+    toMeetings: number;
+    toApplications: number;
+  };
+  actionItems: {
+    leadsToContact: number;
+    leadsToKnockout: number;
+  };
+}
+
 class LeadService {
   async createLead(data: CreateLeadData): Promise<ApiResponse<Lead>> {
     return api.post<Lead>('/api/leads', data);
@@ -129,6 +147,46 @@ class LeadService {
   async removeRM(leadId: string, rmUserId: string): Promise<ApiResponse<Lead>> {
     return api.delete<Lead>(`/api/leads/${leadId}/remove-rm/${rmUserId}`);
   }
+
+  async getFunnelStats(): Promise<ApiResponse<FunnelStats>> {
+    return api.get<FunnelStats>('/api/leads/funnel-stats');
+  }
+
+  async getApplicationOverviewStats(): Promise<ApiResponse<ApplicationOverviewStats>> {
+    return api.get<ApplicationOverviewStats>('/api/leads/application-overview-stats');
+  }
+}
+
+export interface ApplicationOverviewStats {
+  statistics: {
+    totalBorrowers: number;
+    growthPercentage: number;
+    underAssessment: number;
+    newThisWeek: number;
+    highRiskBorrowers: number;
+    highRiskChange: number;
+    pendingApprovals: number;
+  };
+  actionItems: {
+    recentlyApproved: number;
+    missingDocs: number;
+    notScheduled: number;
+    inactiveApplications: number;
+  };
+  recentApplications: Array<{
+    id: string;
+    companyName: string;
+    description: string;
+    status: LeadStatus;
+    lastUpdated: string;
+  }>;
+  pipelineHealth: {
+    notStarted: number;
+    onTrack: number;
+    atRisk: number;
+    delayed: number;
+    completed: number;
+  };
 }
 
 export const leadService = new LeadService();

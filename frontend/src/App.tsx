@@ -9,8 +9,10 @@ import VerifyEmail from './components/Auth/VerifyEmail';
 import { Dashboard } from './components/Dashboard';
 import { LeadsPage, LeadDetailsPage, AddLeadPage } from './components/Leads';
 import { MeetingsPage } from './components/Meetings';
-import { ApplicationManagementPage } from './components/ApplicationManagement';
+import { ApplicationManagementPage, ApplicationOverviewPage } from './components/ApplicationManagement';
 import ProfilePage from './pages/ProfilePage';
+import ScorecardTestPage from './pages/ScorecardTestPage';
+import ScorecardCalculator from './pages/ScorecardCalculator';
 
 const App: React.FC = () => {
   return (
@@ -34,9 +36,14 @@ const App: React.FC = () => {
           {/* Meetings */}
           <Route path="/meetings" element={<MeetingsPage />} />
           {/* Application Management */}
-          <Route path="/application-management" element={<ApplicationManagementPage />} />
+          <Route path="/application-management" element={<ApplicationOverviewPage />} />
+          <Route path="/application-management/:leadId" element={<ApplicationManagementPage />} />
           {/* Profile */}
           <Route path="/profile" element={<ProfilePage />} />
+          {/* Scorecard Test */}
+          <Route path="/scorecard-test" element={<ScorecardTestPage />} />
+          {/* Scorecard Calculator */}
+          <Route path="/scorecard" element={<ScorecardCalculator />} />
         </Routes>
       </Router>
     </ThemeProvider>

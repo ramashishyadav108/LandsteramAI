@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './MandatoryDocsCollection.css';
 import downloadCloudIcon from '../../../assets/download-cloud.png';
 import filterLinesIcon from '../../../assets/filter-lines.png';
@@ -13,6 +14,7 @@ interface MandatoryDocsCollectionProps {
 }
 
 const MandatoryDocsCollection: React.FC<MandatoryDocsCollectionProps> = ({ leadId }) => {
+  const navigate = useNavigate();
   const [documents, setDocuments] = useState<Document[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -382,7 +384,16 @@ const MandatoryDocsCollection: React.FC<MandatoryDocsCollectionProps> = ({ leadI
       )}
 
       <div className="docs-footer">
-        <button className="move-to-application-btn">
+        <button
+          className="move-to-application-btn"
+          onClick={() => {
+            if (leadId) {
+              navigate(`/application-management/${leadId}`);
+            } else {
+              alert('Lead ID is required to move to application management');
+            }
+          }}
+        >
           Move to Application
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <polyline points="9 18 15 12 9 6"></polyline>

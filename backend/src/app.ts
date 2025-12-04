@@ -8,6 +8,7 @@ import meetingRoutes from './routes/meetingRoutes.js';
 import webhookRoutes from './routes/webhookRoutes.js';
 import customerRoutes from './routes/customerRoutes.js';
 import documentRoutes from './routes/documentRoutes.js';
+import scorecardRoutes from './routes/scorecardRoutes.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import { ensureDbConnection } from './middlewares/dbMiddleware.js';
 import { env } from './config/env.js';
@@ -66,6 +67,7 @@ app.use('/api/meetings', meetingRoutes);
 app.use('/api/webhooks', webhookRoutes);
 app.use('/api/customers', customerRoutes);
 app.use('/api/documents', documentRoutes);
+app.use('/api/scorecard', scorecardRoutes);
 
 app.use((_req: Request, res: Response) => {
   res.status(404).json({

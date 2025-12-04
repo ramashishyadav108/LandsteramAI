@@ -30,6 +30,16 @@ export interface UpdateDocumentData {
   status?: 'PENDING' | 'ACTIVE' | 'INACTIVE' | 'REJECTED';
 }
 
+export interface DocumentStats {
+  totalDocuments: number;
+  completedDocuments: number;
+  missingDocuments: number;
+  actionRequiredCount: number;
+  aiExtractedCount: number;
+  reUploadRequiredCount: number;
+  pendingExtractions: number;
+}
+
 class DocumentService {
   /**
    * Upload a new document
@@ -123,6 +133,74 @@ class DocumentService {
 
     const result = await response.json();
     return result.data;
+  }
+
+  /**
+   * Get document statistics for a lead
+   */
+  async getDocumentStats(leadId: string): Promise<DocumentStats> {
+    const response = await api.get<DocumentStats>(`/api/documents/lead/${leadId}/stats`);
+    return response.data || {
+      totalDocuments: 0,
+      completedDocuments: 0,
+      missingDocuments: 0,
+      actionRequiredCount: 0,
+      aiExtractedCount: 0,
+      reUploadRequiredCount: 0,
+      pendingExtractions: 0,
+    };
+  }
+
+  /**
+   * Trigger AI extraction for a document
+   */
+  async triggerAIExtraction(documentId: string): Promise<any> {
+    const response = await api.post<any>(`/api/documents/${documentId}/extract`, {});
+    return response.data;
+  }
+
+  /**
+   * Request missing documents from customer
+   */
+  async requestMissingDocuments(leadId: string): Promise<void> {
+    await api.post<void>(`/api/documents/lead/${leadId}/request-missing`, {});
+  }
+
+  /**
+   * Share documents with customer
+   */
+  async shareWithCustomer(leadId: string, documentIds: string[]): Promise<void> {
+    await api.post<void>(`/api/documents/lead/${leadId}/share`, { documentIds });
+  }
+
+  /**
+   * Download a document
+   */
+  async downloadDocument(documentId: string): Promise<void> {
+    try {
+      const token = localStorage.getItem('accessToken');
+      const response = await fetch(`${API_BASE_URL}/api/documents/${documentId}/download`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) throw new Error('Download failed');
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `document-${documentId}`;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error('Error downloading document:', error);
+      throw error;
+    }
   }
 }
 

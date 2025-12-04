@@ -253,3 +253,31 @@ export const removeRM = async (req: Request, res: Response, next: NextFunction) 
     next(error);
   }
 };
+
+export const getFunnelStats = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const userId = req.user?.userId;
+    if (!userId) {
+      throw new NotFoundError('User not found');
+    }
+
+    const stats = await leadService.getFunnelStats(userId);
+    sendSuccess(res, stats);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const getApplicationOverviewStats = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const userId = req.user?.userId;
+    if (!userId) {
+      throw new NotFoundError('User not found');
+    }
+
+    const stats = await leadService.getApplicationOverviewStats(userId);
+    sendSuccess(res, stats);
+  } catch (error) {
+    next(error);
+  }
+};

@@ -243,3 +243,58 @@ enum DocumentStatus {
 }
 
 
+// 1. VARIABLES & COEFFICIENTS
+model ScorecardConfig {
+  id          Int            @id @default(autoincrement())
+  module      String
+  var_name    String         @unique
+  coefficient Float
+  type        String         // NUMERIC or CATEGORICAL
+  bins        ScorecardBin[]
+}
+
+// 2. BINS (Ranges or Categories for each variable)
+model ScorecardBin {
+  id             Int             @id @default(autoincrement())
+  config         ScorecardConfig @relation(fields: [config_id], references: [id])
+  config_id      Int
+  min_val        Float?
+  max_val        Float?
+  category_label String?
+  woe            Float           @default(0.0)
+}
+
+// 3. SCENARIOS (e.g. "Scenario 0", "Scenario 1")
+model ScorecardScenario {
+  id          Int                     @id @default(autoincrement())
+  name        String                  @unique
+  calibration Float                   @default(0.0) // The Final Calibration Constant
+  configs     ScorecardModuleConfig[]
+}
+
+// 4. MODULE WEIGHTS & INTERCEPTS (Per Scenario)
+model ScorecardModuleConfig {
+  id         Int               @id @default(autoincrement())
+  scenarioId Int
+  scenario   ScorecardScenario @relation(fields: [scenarioId], references: [id])
+  module     String            // Matches ScorecardConfig.module
+  weight     Float             @default(0.0)
+  intercept  Float             @default(0.0)
+
+  @@unique([scenarioId, module])
+}
+
+// 5. INPUT FLAT FILE (User-provided variable values)
+model InputFlatFile {
+  id        Int      @id @default(autoincrement())
+  appId     String
+  var_name  String
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([appId, var_name])
+  @@index([appId])
+}
+
+

@@ -12,6 +12,7 @@
     "prisma:migrate": "npx prisma migrate dev",
     "prisma:generate": "npx prisma generate",
     "prisma:studio": "npx prisma studio",
+    "prisma:seed": "npx tsx prisma/seed.ts",
     "type-check": "npx tsc --noEmit"
   },
   "keywords": [

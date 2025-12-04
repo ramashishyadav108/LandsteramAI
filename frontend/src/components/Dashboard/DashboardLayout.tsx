@@ -3,11 +3,12 @@ import Sidebar from './Sidebar';
 import Header from './Header';
 import './DashboardLayout.css';
 
-interface DashboardLayoutProps {
+export interface DashboardLayoutProps {
   children?: React.ReactNode;
+  pageTitle?: string;
 }
 
-const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
+const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, pageTitle }) => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   const toggleSidebar = () => {
@@ -18,7 +19,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
     <div className="dashboard-layout">
       <Sidebar collapsed={sidebarCollapsed} onToggle={toggleSidebar} />
       <div className={`dashboard-main ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
-        <Header collapsed={sidebarCollapsed} onToggle={toggleSidebar} />
+        <Header collapsed={sidebarCollapsed} onToggle={toggleSidebar} pageTitle={pageTitle} />
         <main className="dashboard-content">
           {children}
         </main>

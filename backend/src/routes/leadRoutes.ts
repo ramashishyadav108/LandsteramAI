@@ -12,6 +12,8 @@ router.post('/', leadController.createLead);
 router.get('/', leadController.getAllLeads);
 router.get('/my-leads', leadController.getMyLeads);
 router.get('/stats', leadController.getLeadStats);
+router.get('/funnel-stats', leadController.getFunnelStats);
+router.get('/application-overview-stats', leadController.getApplicationOverviewStats);
 router.get('/:id', leadController.getLead);
 router.put('/:id', leadController.updateLead);
 router.put('/:id/assign-rm', leadController.assignRM);
