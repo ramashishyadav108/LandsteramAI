@@ -154,35 +154,3 @@ kratosAi/
 └── README.md
 ```
 
-## Troubleshooting
-
-**Database Connection Error**
-```bash
-# Check DATABASE_URL in .env
-npx prisma migrate dev
-```
-
-**CORS Error**
-```bash
-# Ensure FRONTEND_URL matches your frontend URL
-```
-
-**Email Not Sending**
-```bash
-# For Gmail, use App Password
-# Check spam folder
-```
-
-**Prisma Issues**
-```bash
-npx prisma generate
-npx prisma migrate dev
-```
-
-## License
-
-ISC License
-
----
-
-**KratosAI Team**
